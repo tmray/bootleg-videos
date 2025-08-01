@@ -106,6 +106,13 @@
                         </a>
                         {% endif %}
                         
+                        {% if site.bandcamp_username %}
+                        <a href="https://{{ site.bandcamp_username }}.bandcamp.com" target="_blank" class="social-link">
+                            <span class="social-icon">🎼</span>
+                            <span>Bandcamp</span>
+                        </a>
+                        {% endif %}
+                        
                         <a href="mailto:{{ site.email }}" class="social-link">
                             <span class="social-icon">✉️</span>
                             <span>Email</span>
