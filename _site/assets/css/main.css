@@ -34,13 +34,13 @@ body {
         radial-gradient(circle at 80% 20%, rgba(140, 140, 140, 0.03) 1px, transparent 1px),
         radial-gradient(circle at 40% 80%, rgba(140, 140, 140, 0.03) 1px, transparent 1px);
     background-size: 50px 50px, 30px 30px, 40px 40px;
-    animation: vhs-static 2s infinite;
+    animation: vhs-static 1.5s infinite;
 }
 
 @keyframes vhs-static {
     0% { opacity: 0.9; }
     50% { opacity: 1; }
-    100% { opacity: 0.9; }
+    100% { opacity: 0.85; }
 }
 
 .container {
