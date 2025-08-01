@@ -1,0 +1,469 @@
+/* Underground VHS Aesthetic - Lorenzo's Music */
+
+/* VHS Color Palette */
+:root {
+    --vhs-red: #ff0000;
+    --vhs-blue: #0000ff;
+    --vhs-green: #00ff00;
+    --vhs-yellow: #ffff00;
+    --vhs-magenta: #ff00ff;
+    --vhs-cyan: #00ffff;
+    --vhs-black: #000000;
+    --vhs-white: #ffffff;
+    --vhs-gray: #808080;
+    --vhs-dark-gray: #404040;
+    --vhs-light-gray: #c0c0c0;
+    --vhs-brown: #8b4513;
+    --vhs-orange: #ff8c00;
+    --vhs-purple: #800080;
+    --vhs-pink: #ffc0cb;
+    --vhs-lime: #32cd32;
+    --vhs-teal: #008080;
+    --vhs-navy: #000080;
+    --vhs-maroon: #800000;
+    --vhs-olive: #808000;
+}
+
+/* VHS Artifacts and Effects */
+.vhs-glitch {
+    position: relative;
+    overflow: hidden;
+}
+
+.vhs-glitch::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    animation: vhs-scan 3s infinite;
+    z-index: 10;
+}
+
+@keyframes vhs-scan {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
+
+/* VHS Tracking Lines */
+.vhs-tracking::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 255, 255, 0.1) 2px,
+        rgba(255, 255, 255, 0.1) 4px
+    );
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* VHS Static Noise */
+.vhs-static {
+    position: relative;
+}
+
+.vhs-static::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 40% 80%, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 30px 30px, 40px 40px;
+    animation: vhs-static 0.5s infinite;
+    pointer-events: none;
+    z-index: 3;
+}
+
+@keyframes vhs-static {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.7; }
+    100% { opacity: 0.3; }
+}
+
+/* TV Test Pattern */
+.tv-test-pattern {
+    background: linear-gradient(
+        0deg,
+        var(--vhs-black) 0%,
+        var(--vhs-black) 8.33%,
+        var(--vhs-white) 8.33%,
+        var(--vhs-white) 16.66%,
+        var(--vhs-yellow) 16.66%,
+        var(--vhs-yellow) 25%,
+        var(--vhs-cyan) 25%,
+        var(--vhs-cyan) 33.33%,
+        var(--vhs-green) 33.33%,
+        var(--vhs-green) 41.66%,
+        var(--vhs-magenta) 41.66%,
+        var(--vhs-magenta) 50%,
+        var(--vhs-red) 50%,
+        var(--vhs-red) 58.33%,
+        var(--vhs-blue) 58.33%,
+        var(--vhs-blue) 66.66%,
+        var(--vhs-black) 66.66%,
+        var(--vhs-black) 75%,
+        var(--vhs-white) 75%,
+        var(--vhs-white) 83.33%,
+        var(--vhs-yellow) 83.33%,
+        var(--vhs-yellow) 91.66%,
+        var(--vhs-cyan) 91.66%,
+        var(--vhs-cyan) 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.tv-test-pattern::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background: 
+        radial-gradient(circle, var(--vhs-white) 0%, transparent 30%),
+        radial-gradient(circle, var(--vhs-black) 30%, transparent 60%),
+        radial-gradient(circle, var(--vhs-white) 60%, transparent 100%);
+    border-radius: 50%;
+    animation: test-pattern-pulse 2s infinite;
+}
+
+@keyframes test-pattern-pulse {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; }
+}
+
+/* FBI Warning Screen */
+.fbi-warning {
+    background: var(--vhs-black);
+    color: var(--vhs-white);
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.fbi-warning::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%);
+    animation: fbi-scan 4s infinite;
+}
+
+@keyframes fbi-scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.fbi-warning h1 {
+    color: var(--vhs-red);
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.fbi-warning p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* VHS Tape Interface */
+.vhs-interface {
+    background: var(--vhs-dark-gray);
+    border: 3px solid var(--vhs-black);
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+    box-shadow: 
+        inset 0 0 10px rgba(0, 0, 0, 0.5),
+        0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.vhs-interface::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    height: 20px;
+    background: linear-gradient(90deg, 
+        var(--vhs-red) 0%, 
+        var(--vhs-red) 20%, 
+        var(--vhs-white) 20%, 
+        var(--vhs-white) 40%, 
+        var(--vhs-blue) 40%, 
+        var(--vhs-blue) 60%, 
+        var(--vhs-white) 60%, 
+        var(--vhs-white) 80%, 
+        var(--vhs-red) 80%, 
+        var(--vhs-red) 100%);
+    border-radius: 5px;
+}
+
+/* VHS Counter Display */
+.vhs-counter {
+    font-family: 'Digital-7', monospace;
+    background: var(--vhs-black);
+    color: var(--vhs-red);
+    padding: 0.5rem;
+    border: 2px solid var(--vhs-gray);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 0 0 5px var(--vhs-red);
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+/* VHS Rewind/Fast Forward Buttons */
+.vhs-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.vhs-btn {
+    background: var(--vhs-gray);
+    color: var(--vhs-black);
+    border: 2px solid var(--vhs-black);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.vhs-btn:hover {
+    background: var(--vhs-light-gray);
+    transform: scale(1.05);
+}
+
+.vhs-btn:active {
+    transform: scale(0.95);
+}
+
+/* VHS Tracking Adjustment */
+.vhs-tracking-adjust {
+    background: var(--vhs-black);
+    color: var(--vhs-white);
+    padding: 1rem;
+    border: 2px solid var(--vhs-gray);
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Courier New', monospace;
+}
+
+.tracking-bar {
+    width: 100%;
+    height: 20px;
+    background: var(--vhs-dark-gray);
+    border: 1px solid var(--vhs-gray);
+    border-radius: 10px;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.tracking-indicator {
+    width: 4px;
+    height: 100%;
+    background: var(--vhs-red);
+    position: absolute;
+    left: 50%;
+    animation: tracking-drift 3s infinite;
+}
+
+@keyframes tracking-drift {
+    0%, 100% { left: 45%; }
+    50% { left: 55%; }
+}
+
+/* VHS Menu System */
+.vhs-menu {
+    background: var(--vhs-black);
+    color: var(--vhs-white);
+    font-family: 'Courier New', monospace;
+    padding: 2rem;
+    border: 3px solid var(--vhs-gray);
+    border-radius: 10px;
+}
+
+.vhs-menu h1 {
+    color: var(--vhs-red);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(255, 0, 0, 0.5);
+}
+
+.vhs-menu-item {
+    background: var(--vhs-dark-gray);
+    color: var(--vhs-white);
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border: 2px solid var(--vhs-gray);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.vhs-menu-item:hover {
+    background: var(--vhs-red);
+    color: var(--vhs-black);
+    transform: scale(1.02);
+}
+
+/* VHS Loading Screen */
+.vhs-loading {
+    background: var(--vhs-black);
+    color: var(--vhs-white);
+    text-align: center;
+    padding: 3rem;
+    font-family: 'Courier New', monospace;
+}
+
+.vhs-loading h1 {
+    color: var(--vhs-red);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.loading-bar {
+    width: 100%;
+    height: 30px;
+    background: var(--vhs-dark-gray);
+    border: 2px solid var(--vhs-gray);
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.loading-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--vhs-red), var(--vhs-orange));
+    width: 0%;
+    animation: loading-fill 3s infinite;
+}
+
+@keyframes loading-fill {
+    0% { width: 0%; }
+    100% { width: 100%; }
+}
+
+/* VHS Error Screen */
+.vhs-error {
+    background: var(--vhs-black);
+    color: var(--vhs-red);
+    text-align: center;
+    padding: 2rem;
+    font-family: 'Courier New', monospace;
+    border: 3px solid var(--vhs-red);
+}
+
+.vhs-error h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.vhs-error p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+/* Responsive VHS Design */
+@media (max-width: 768px) {
+    .vhs-menu h1 {
+        font-size: 1.5rem;
+    }
+    
+    .fbi-warning h1 {
+        font-size: 1.5rem;
+    }
+    
+    .vhs-loading h1 {
+        font-size: 2rem;
+    }
+}
+
+/* VHS Typography */
+.vhs-text {
+    font-family: 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vhs-title {
+    font-family: 'Impact', 'Arial Black', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* VHS Color Bars */
+.color-bars {
+    height: 100px;
+    background: linear-gradient(90deg,
+        var(--vhs-white) 0%,
+        var(--vhs-white) 7.14%,
+        var(--vhs-yellow) 7.14%,
+        var(--vhs-yellow) 14.28%,
+        var(--vhs-cyan) 14.28%,
+        var(--vhs-cyan) 21.42%,
+        var(--vhs-green) 21.42%,
+        var(--vhs-green) 28.56%,
+        var(--vhs-magenta) 28.56%,
+        var(--vhs-magenta) 35.7%,
+        var(--vhs-red) 35.7%,
+        var(--vhs-red) 42.84%,
+        var(--vhs-blue) 42.84%,
+        var(--vhs-blue) 50%,
+        var(--vhs-black) 50%,
+        var(--vhs-black) 57.14%,
+        var(--vhs-white) 57.14%,
+        var(--vhs-white) 64.28%,
+        var(--vhs-yellow) 64.28%,
+        var(--vhs-yellow) 71.42%,
+        var(--vhs-cyan) 71.42%,
+        var(--vhs-cyan) 78.56%,
+        var(--vhs-green) 78.56%,
+        var(--vhs-green) 85.7%,
+        var(--vhs-magenta) 85.7%,
+        var(--vhs-magenta) 92.84%,
+        var(--vhs-red) 92.84%,
+        var(--vhs-red) 100%
+    );
+} 

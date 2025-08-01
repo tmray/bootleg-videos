@@ -1,0 +1,130 @@
+---
+layout: page
+title: Contact
+subtitle: Get In Touch With Us
+---
+
+<div class="contact-content">
+    <div class="contact-intro">
+        <p>We love hearing from our listeners! Whether you want to share your thoughts on our music, collaborate on a project, or just say hello, we'd love to connect with you.</p>
+    </div>
+
+    <div class="contact-sections">
+        <div class="contact-section">
+            <h2>General Inquiries</h2>
+            <p>For general questions, feedback, or just to say hello:</p>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Booking & Live Shows</h2>
+            <p>Interested in booking us for a show or event?</p>
+            <div class="contact-info">
+                <p><strong>Booking Email:</strong> <a href="mailto:booking@lorenzosmusic.com">booking@lorenzosmusic.com</a></p>
+                <p><strong>Phone:</strong> (555) 123-4567</p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Press & Media</h2>
+            <p>For press inquiries, interviews, or media requests:</p>
+            <div class="contact-info">
+                <p><strong>Press Email:</strong> <a href="mailto:press@lorenzosmusic.com">press@lorenzosmusic.com</a></p>
+            </div>
+        </div>
+
+        <div class="contact-section">
+            <h2>Collaborations</h2>
+            <p>Interested in collaborating on music, videos, or other creative projects?</p>
+            <div class="contact-info">
+                <p><strong>Collaboration Email:</strong> <a href="mailto:collab@lorenzosmusic.com">collab@lorenzosmusic.com</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-form-section">
+        <h2>Send Us a Message</h2>
+        <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject">
+                    <option value="general">General Inquiry</option>
+                    <option value="booking">Booking</option>
+                    <option value="press">Press/Media</option>
+                    <option value="collaboration">Collaboration</option>
+                    <option value="feedback">Music Feedback</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="social-links-section">
+        <h2>Follow Us</h2>
+        <div class="social-links">
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-link">
+                <span class="social-icon">🐦</span>
+                <span>Twitter</span>
+            </a>
+            {% endif %}
+            
+            {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-link">
+                <span class="social-icon">📁</span>
+                <span>GitHub</span>
+            </a>
+            {% endif %}
+            
+            <a href="#" target="_blank" class="social-link">
+                <span class="social-icon">🎵</span>
+                <span>Spotify</span>
+            </a>
+            
+            <a href="#" target="_blank" class="social-link">
+                <span class="social-icon">📺</span>
+                <span>YouTube</span>
+            </a>
+            
+            <a href="#" target="_blank" class="social-link">
+                <span class="social-icon">📷</span>
+                <span>Instagram</span>
+            </a>
+            
+            {% if site.mastodon_username and site.mastodon_instance %}
+            <a href="https://{{ site.mastodon_instance }}/@{{ site.mastodon_username }}" target="_blank" class="social-link">
+                <span class="social-icon">🐘</span>
+                <span>Mastodon</span>
+            </a>
+            {% endif %}
+            
+            {% if site.pixelfed_username and site.pixelfed_instance %}
+            <a href="https://{{ site.pixelfed_instance }}/@{{ site.pixelfed_username }}" target="_blank" class="social-link">
+                <span class="social-icon">📸</span>
+                <span>Pixelfed</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div> 

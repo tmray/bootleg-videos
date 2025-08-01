@@ -1,0 +1,182 @@
+---
+layout: default
+title: Home
+---
+
+<!-- Hero Section -->
+<section class="hero vhs-glitch">
+    <div class="hero-background">
+        {% if site.hero.background_image %}
+        <div class="hero-bg-image" style="background-image: url('{{ site.hero.background_image | relative_url }}');"></div>
+        {% endif %}
+    </div>
+    <div class="hero-content">
+        <h1 class="hero-title">{{ site.hero.title | default: "LORENZO'S MUSIC" }}</h1>
+        <p class="hero-subtitle">{{ site.hero.subtitle | default: "Experimental lofi rock band creating unique soundscapes and atmospheric music" }}</p>
+        <div class="hero-buttons">
+            {% if site.hero.buttons %}
+                {% for button in site.hero.buttons %}
+                <a href="{{ button.url | relative_url }}" class="btn btn-{{ button.style }}">{{ button.text }}</a>
+                {% endfor %}
+            {% else %}
+                <a href="{{ '/music' | relative_url }}" class="btn btn-primary">Listen Now</a>
+                <a href="{{ '/about' | relative_url }}" class="btn btn-secondary">About Us</a>
+                <a href="{{ '/blog' | relative_url }}" class="btn btn-outline">Latest Blog</a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Social Links Section -->
+<section class="social-links-section vhs-static">
+    <div class="container">
+        <h2 class="section-title">Follow Us</h2>
+        <div class="social-links">
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-link">
+                <span class="social-icon">🐦</span>
+                <span>Twitter</span>
+            </a>
+            {% endif %}
+            
+            {% if site.github_username %}
+            <a href="https://github.com/{{ site.github_username }}" target="_blank" class="social-link">
+                <span class="social-icon">📁</span>
+                <span>GitHub</span>
+            </a>
+            {% endif %}
+            
+            {% if site.spotify_username %}
+            <a href="https://open.spotify.com/artist/{{ site.spotify_username }}" target="_blank" class="social-link">
+                <span class="social-icon">🎵</span>
+                <span>Spotify</span>
+            </a>
+            {% endif %}
+            
+            {% if site.youtube_channel %}
+            <a href="https://youtube.com/{{ site.youtube_channel }}" target="_blank" class="social-link">
+                <span class="social-icon">📺</span>
+                <span>YouTube</span>
+            </a>
+            {% endif %}
+            
+            {% if site.instagram_username %}
+            <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" class="social-link">
+                <span class="social-icon">📷</span>
+                <span>Instagram</span>
+            </a>
+            {% endif %}
+            
+            {% if site.mastodon_username and site.mastodon_instance %}
+            <a href="https://{{ site.mastodon_instance }}/@{{ site.mastodon_username }}" target="_blank" class="social-link">
+                <span class="social-icon">🐘</span>
+                <span>Mastodon</span>
+            </a>
+            {% endif %}
+            
+            {% if site.pixelfed_username and site.pixelfed_instance %}
+            <a href="https://{{ site.pixelfed_instance }}/@{{ site.pixelfed_username }}" target="_blank" class="social-link">
+                <span class="social-icon">📸</span>
+                <span>Pixelfed</span>
+            </a>
+            {% endif %}
+            
+            <a href="mailto:{{ site.email }}" class="social-link">
+                <span class="social-icon">✉️</span>
+                <span>Email</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Music Section -->
+<section class="featured-music vhs-static">
+    <div class="container">
+        <h2 class="section-title">Featured Music</h2>
+        <div class="music-grid">
+            <div class="music-card vhs-glitch">
+                <div class="music-card-image">
+                    <div class="placeholder-album">ALBUM ART</div>
+                </div>
+                <div class="music-card-content">
+                    <h3>Latest Release</h3>
+                    <p>Our newest experimental lofi rock album featuring atmospheric soundscapes and raw energy.</p>
+                    <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Listen</a>
+                </div>
+            </div>
+            <div class="music-card vhs-glitch">
+                <div class="music-card-image">
+                    <div class="placeholder-album">ALBUM ART</div>
+                </div>
+                <div class="music-card-content">
+                    <h3>Live Performance</h3>
+                    <p>Raw, unfiltered live recordings from our underground shows and experimental sessions.</p>
+                    <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Watch</a>
+                </div>
+            </div>
+            <div class="music-card vhs-glitch">
+                <div class="music-card-image">
+                    <div class="placeholder-album">ALBUM ART</div>
+                </div>
+                <div class="music-card-content">
+                    <h3>Experimental Tracks</h3>
+                    <p>Unreleased demos and experimental tracks showcasing our creative process.</p>
+                    <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Preview Section -->
+<section class="about-preview vhs-tracking">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Lorenzo's Music</h2>
+                <p>We are an experimental lofi rock band pushing the boundaries of underground music. Our sound combines raw energy with atmospheric textures, creating a unique blend of noise, melody, and emotion.</p>
+                <p>Drawing inspiration from the forgotten era of underground music, we create soundscapes that transport listeners to a world of gritty authenticity and raw expression.</p>
+                <a href="{{ '/about' | relative_url }}" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="about-image">
+                <div class="placeholder-band">BAND PHOTO</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest Blog Posts -->
+<section class="latest-posts vhs-static">
+    <div class="container">
+        <h2 class="section-title">Latest Blog Posts</h2>
+        <div class="posts-grid">
+            {% for post in site.posts limit:3 %}
+            <article class="post-card vhs-glitch">
+                <div class="post-card-content">
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    <div class="post-meta">
+                        <span>{{ post.date | date: "%B %d, %Y" }}</span>
+                        {% if post.author %}
+                        <span>by {{ post.author }}</span>
+                        {% endif %}
+                    </div>
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                    <div class="post-footer">
+                        <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+                        {% if post.tags %}
+                        <div class="post-tags">
+                            {% for tag in post.tags %}
+                            <span class="tag">{{ tag }}</span>
+                            {% endfor %}
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        <div class="posts-cta">
+            <a href="{{ '/blog' | relative_url }}" class="btn btn-outline">View All Posts</a>
+        </div>
+    </div>
+</section> 

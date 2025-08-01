@@ -1,0 +1,76 @@
+# Site settings
+title: Lorenzo's Music
+email: info@lorenzosmusic.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Experimental lofi rock band creating unique soundscapes and atmospheric music.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://lorenzosmusic.com" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: lorenzosmusic
+github_username:  lorenzosmusic
+
+# Social Media Configuration
+# Uncomment and add your usernames/channel IDs to enable social links
+twitter_username: lorenzosmusic
+github_username:  lorenzosmusic
+# spotify_username: your_spotify_artist_id
+youtube_channel: lorenzosmusic
+# instagram_username: your_instagram_username
+mastodon_username: lorenzosmusic
+mastodon_instance: mastodon.social
+pixelfed_username: lorenzosmusic
+pixelfed_instance: pixelfed.social
+# bandcamp_username: your_bandcamp_username
+# soundcloud_username: your_soundcloud_username
+
+# Hero Section Configuration
+hero:
+  title: "LORENZO'S MUSIC"
+  subtitle: "Experimental lofi rock band creating unique soundscapes and atmospheric music"
+  background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"  # Optional: path to background image
+  buttons:
+    - text: "Listen Now"
+      url: "/music"
+      style: "primary"
+    - text: "About Us"
+      url: "/about"
+      style: "secondary"
+    - text: "Latest Blog"
+      url: "/blog"
+      style: "outline"
+
+# Build settings
+markdown: kramdown
+permalink: /:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Lorenzo"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/ 
