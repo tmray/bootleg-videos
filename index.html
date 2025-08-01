@@ -7,7 +7,10 @@ title: Home
 <section class="hero vhs-glitch">
     <div class="hero-background">
         {% if site.hero.background_image %}
-        <div class="hero-bg-image" style="background-image: url('{{ site.hero.background_image | relative_url }}');"></div>
+        <div class="hero-bg-image hero-bg-desktop" style="background-image: url('{{ site.hero.background_image | relative_url }}');"></div>
+        {% endif %}
+        {% if site.hero.background_image_mobile %}
+        <div class="hero-bg-image hero-bg-mobile" style="background-image: url('{{ site.hero.background_image_mobile | relative_url }}');"></div>
         {% endif %}
     </div>
     <div class="hero-content">

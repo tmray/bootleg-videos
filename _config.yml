@@ -26,7 +26,8 @@ bandcamp_username: lorenzosmusic
 hero:
   title: "LORENZO'S MUSIC"
   subtitle: "Experimental lofi rock band creating unique soundscapes and atmospheric music"
-  background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"  # Optional: path to background image
+  background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"  # Desktop background image
+  background_image_mobile: "/assets/images/lorenzos-music-square-header-band-image.jpg"  # Mobile background image (optional)
   buttons:
     - text: "Listen Now"
       url: "/music"
