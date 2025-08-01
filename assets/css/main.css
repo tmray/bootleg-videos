@@ -403,6 +403,16 @@ a:hover {
     z-index: -1;
 }
 
+/* Desktop background image (default) */
+.hero-bg-desktop {
+    display: block;
+}
+
+/* Mobile background image (hidden by default) */
+.hero-bg-mobile {
+    display: none;
+}
+
 
 
 .hero-content {
@@ -1355,6 +1365,15 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+    /* Switch to mobile background image if available */
+    .hero-bg-desktop {
+        display: none;
+    }
+    
+    .hero-bg-mobile {
+        display: block;
+    }
+    
     .hamburger {
         display: flex;
     }
@@ -1484,7 +1503,7 @@ a:hover {
     }
     
     .hero-bg-image {
-        background-size: contain;
+        background-size: cover;
         background-position: center;
     }
     
