@@ -97,20 +97,26 @@ subtitle: Get In Touch With Us
             </a>
             {% endif %}
             
-            <a href="#" target="_blank" class="social-link">
+            {% if site.spotify_username %}
+            <a href="https://open.spotify.com/artist/{{ site.spotify_username }}" target="_blank" class="social-link">
                 <span class="social-icon">🎵</span>
                 <span>Spotify</span>
             </a>
+            {% endif %}
             
-            <a href="#" target="_blank" class="social-link">
+            {% if site.youtube_channel %}
+            <a href="https://youtube.com/{{ site.youtube_channel }}" target="_blank" class="social-link">
                 <span class="social-icon">📺</span>
                 <span>YouTube</span>
             </a>
+            {% endif %}
             
-            <a href="#" target="_blank" class="social-link">
+            {% if site.instagram_username %}
+            <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" class="social-link">
                 <span class="social-icon">📷</span>
                 <span>Instagram</span>
             </a>
+            {% endif %}
             
             {% if site.mastodon_username and site.mastodon_instance %}
             <a href="https://{{ site.mastodon_instance }}/@{{ site.mastodon_username }}" target="_blank" class="social-link">
@@ -123,6 +129,13 @@ subtitle: Get In Touch With Us
             <a href="https://{{ site.pixelfed_instance }}/@{{ site.pixelfed_username }}" target="_blank" class="social-link">
                 <span class="social-icon">📸</span>
                 <span>Pixelfed</span>
+            </a>
+            {% endif %}
+            
+            {% if site.bandcamp_username %}
+            <a href="https://{{ site.bandcamp_username }}.bandcamp.com" target="_blank" class="social-link">
+                <span class="social-icon">🎼</span>
+                <span>Bandcamp</span>
             </a>
             {% endif %}
         </div>
