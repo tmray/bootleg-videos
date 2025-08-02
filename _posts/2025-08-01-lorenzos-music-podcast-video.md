@@ -49,7 +49,7 @@ We describe our music as "experimental lofi rock," but that barely scratches the
 
 ## What's Next
 
-We're currently working on our next album, which we're incredibly excited about. The new material pushes our boundaries even further, exploring new sonic territories while staying true to our core sound.
+We're currently [working on our next album](https://www.lorenzosmusic.com), which we're incredibly excited about. The new material pushes our boundaries even further, exploring new sonic territories while staying true to our core sound.
 
 Stay tuned for more updates, and thank you for joining us on this musical journey!
 
