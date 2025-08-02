@@ -782,6 +782,43 @@ a:hover {
     position: relative;
 }
 
+/* Album art images */
+.album-art-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(30%) saturate(120%) contrast(110%) brightness(0.9);
+    transition: all 0.3s ease;
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.album-art-image:hover {
+    filter: sepia(20%) saturate(130%) contrast(120%) brightness(0.95);
+    transform: scale(1.02);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+}
+
+.release-art-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(30%) saturate(120%) contrast(110%) brightness(0.9);
+    transition: all 0.3s ease;
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+}
+
+.release-art-image:hover {
+    filter: sepia(20%) saturate(130%) contrast(120%) brightness(0.95);
+    transform: scale(1.02);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.2);
+}
+
 .album-info h3 {
     color: var(--flickering-cyan);
     margin-bottom: 1rem;
