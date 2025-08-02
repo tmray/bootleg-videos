@@ -6,28 +6,33 @@ subtitle: Listen to Our Latest Releases
 
 <div class="music-content">
     <div class="music-section">
-        <h2>Latest Album: Atmospheric Dreams</h2>
+        <h2>Latest Album: {{ site.music.latest_album.title }}</h2>
         <div class="album-feature">
             <div class="album-art">
+                {% if site.music.latest_album.image %}
+                <img src="{{ site.music.latest_album.image | relative_url }}" alt="{{ site.music.latest_album.title }} Album Art" class="album-art-image">
+                {% else %}
                 <div class="placeholder-album-large">Album Art</div>
+                {% endif %}
             </div>
             <div class="album-info">
-                <h3>Atmospheric Dreams</h3>
-                <p class="album-description">Our latest experimental lofi rock album explores the boundaries between digital and analog, creating unique sonic landscapes that transport listeners to new dimensions.</p>
+                <h3>{{ site.music.latest_album.title }}</h3>
+                <p class="album-description">{{ site.music.latest_album.description }}</p>
                 <div class="album-tracks">
                     <h4>Track Listing:</h4>
                     <ol>
-                        <li>Digital Sunset</li>
-                        <li>Echo Chamber</li>
-                        <li>Atmospheric Dreams</li>
-                        <li>Lofi Rock Fusion</li>
-                        <li>Ambient Waves</li>
-                        <li>Experimental Journey</li>
+                        {% for track in site.music.latest_album.tracks %}
+                        <li>{{ track }}</li>
+                        {% endfor %}
                     </ol>
                 </div>
                 <div class="album-links">
-                    <a href="#" class="btn btn-primary">Listen on Spotify</a>
-                    <a href="#" class="btn btn-secondary">Buy on Bandcamp</a>
+                    {% if site.music.latest_album.spotify_url %}
+                    <a href="{{ site.music.latest_album.spotify_url }}" target="_blank" class="btn btn-primary">Listen on Spotify</a>
+                    {% endif %}
+                    {% if site.music.latest_album.bandcamp_url %}
+                    <a href="{{ site.music.latest_album.bandcamp_url }}" target="_blank" class="btn btn-secondary">Buy on Bandcamp</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -77,50 +82,30 @@ subtitle: Listen to Our Latest Releases
     <div class="music-section">
         <h2>Previous Releases</h2>
         <div class="releases-grid">
+            {% for release in site.music.releases %}
             <div class="release-card">
                 <div class="release-art">
+                    {% if release.image %}
+                    <img src="{{ release.image | relative_url }}" alt="{{ release.title }} Album Art" class="release-art-image">
+                    {% else %}
                     <div class="placeholder-album">Album Art</div>
+                    {% endif %}
                 </div>
                 <div class="release-info">
-                    <h3>Echo Chamber EP</h3>
-                    <p class="release-year">2023</p>
-                    <p>Ambient soundscapes and rock fusion in this experimental EP.</p>
+                    <h3>{{ release.title }}</h3>
+                    <p class="release-year">{{ release.year }}</p>
+                    <p>{{ release.description }}</p>
                     <div class="release-links">
-                        <a href="#" class="btn btn-small">Listen</a>
-                        <a href="#" class="btn btn-small btn-outline">Buy</a>
+                        {% if release.spotify_url %}
+                        <a href="{{ release.spotify_url }}" target="_blank" class="btn btn-small">Listen</a>
+                        {% endif %}
+                        {% if release.bandcamp_url %}
+                        <a href="{{ release.bandcamp_url }}" target="_blank" class="btn btn-small btn-outline">Buy</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
-            
-            <div class="release-card">
-                <div class="release-art">
-                    <div class="placeholder-album">Album Art</div>
-                </div>
-                <div class="release-info">
-                    <h3>Digital Waves</h3>
-                    <p class="release-year">2022</p>
-                    <p>Electronic meets rock in this experimental collection.</p>
-                    <div class="release-links">
-                        <a href="#" class="btn btn-small">Listen</a>
-                        <a href="#" class="btn btn-small btn-outline">Buy</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="release-card">
-                <div class="release-art">
-                    <div class="placeholder-album">Album Art</div>
-                </div>
-                <div class="release-info">
-                    <h3>Lofi Sessions</h3>
-                    <p class="release-year">2021</p>
-                    <p>Our debut collection of lofi rock experiments.</p>
-                    <div class="release-links">
-                        <a href="#" class="btn btn-small">Listen</a>
-                        <a href="#" class="btn btn-small btn-outline">Buy</a>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 

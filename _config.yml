@@ -39,6 +39,42 @@ hero:
       url: "/blog"
       style: "outline"
 
+# Music Configuration
+music:
+  latest_album:
+    title: "Lorenzo's Remixes, Volume 2"
+    description: "a collection of Lorenzo's Music tracks remixed by us and other artists. It was released on the blocSonic label for Netlabel Day. Our songs get rerouted and reimagined. The album features contributions from: Spiedkiks, Headsnack,Timezone LaFontaine, Velcro Mary, and AxWax. Plus, we also reinterpret and remix six of the songs ourselves "
+    image: "/assets/images/album-covers/Lorenzos-Remixes-volume-2-Cover-800px.jpg"
+    spotify_url: "https://open.spotify.com/album/your-album-id"
+    bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/atmospheric-dreams"
+    tracks:
+      - "Digital Sunset"
+      - "Echo Chamber"
+      - "Atmospheric Dreams"
+      - "Lofi Rock Fusion"
+      - "Ambient Waves"
+      - "Experimental Journey"
+  
+  releases:
+    - title: "Friction"
+      year: "2025"
+      description: "Friction by Lorenzo's Music is a genre-blurring experimental rock album crafted as a movie soundtrack."
+      image: "/assets/images/album-covers/friction-album-cover-art-lorenzos-music-600px.png"
+      spotify_url: "https://open.spotify.com/album/your-ep-id"
+      bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/echo-chamber-ep"
+    - title: "Digital Waves"
+      year: "2022"
+      description: "Electronic meets rock in this experimental collection."
+      image: "/assets/images/digital-waves-album.jpg"
+      spotify_url: "https://open.spotify.com/album/your-album-id"
+      bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/digital-waves"
+    - title: "Lofi Sessions"
+      year: "2021"
+      description: "Our debut collection of lofi rock experiments."
+      image: "/assets/images/lofi-sessions-album.jpg"
+      spotify_url: "https://open.spotify.com/album/your-album-id"
+      bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/lofi-sessions"
+
 # Build settings
 markdown: kramdown
 permalink: /:title/
