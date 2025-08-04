@@ -7,7 +7,7 @@ tags: [welcome, introduction, music]
 excerpt: "Welcome to our new website! We're excited to share our experimental lofi rock journey with you."
 ---
 
-Welcome to Lorenzo's Music! We're thrilled to finally have our own corner of the internet where we can share our experimental lofi rock journey with you.
+Welcome to **Lorenzo's Music!** We're thrilled to finally have our own corner of the internet where we can share our experimental lofi rock journey with you.
 
 ## Our Story Begins
 
