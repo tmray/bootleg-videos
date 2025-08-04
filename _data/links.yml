@@ -1,0 +1,53 @@
+# Links Page Configuration
+title: "LORENZO'S MUSIC"
+description: "Experimental lofi rock band creating open-source music"
+profile_image: "/assets/images/lorenzos-music-square-header-band-image.jpg"
+
+# Add your links here - order matters!
+links:
+  - title: "Latest Album"
+    description: "Listen to our newest release"
+    url: "/music"
+    icon: "🎵"
+    external: false
+    highlight: true
+    background_image: "/assets/images/album-covers/Lorenzos-Remixes-volume-2-Cover-800px.jpg"
+  
+  - title: "About Us"
+    description: "Learn more about the band"
+    url: "/about"
+    icon: "👥"
+    external: false
+    background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"
+  
+  - title: "Latest Blog Post"
+    description: "Read our newest article"
+    url: "/blog"
+    icon: "📝"
+    external: false
+  
+  - title: "Bandcamp"
+    description: "Buy our music directly"
+    url: "https://lorenzosmusic.bandcamp.com"
+    icon: "🎼"
+    external: true
+    background_image: "/assets/images/album-covers/friction-album-cover-art-lorenzos-music-600px.png"
+  
+  - title: "Spotify"
+    description: "Stream on Spotify"
+    url: "https://open.spotify.com/artist/your-artist-id"
+    icon: "🎧"
+    external: true
+  
+  - title: "YouTube"
+    description: "Watch our videos"
+    url: "https://youtube.com/lorenzosmusic"
+    icon: "📺"
+    external: true
+    background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"
+  
+  - title: "Contact"
+    description: "Get in touch with us"
+    url: "/contact"
+    icon: "✉️"
+    external: false 

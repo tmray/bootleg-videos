@@ -1,0 +1,87 @@
+---
+layout: page
+title: Links
+subtitle: Connect with Lorenzo's Music
+---
+
+<div class="links-content">
+    <div class="links-header">
+        <div class="profile-section">
+            {% if site.data.links.profile_image %}
+            <div class="profile-image">
+                <img src="{{ site.data.links.profile_image | relative_url }}" alt="Lorenzo's Music" class="profile-img">
+            </div>
+            {% endif %}
+            <h1 class="profile-title">{{ site.data.links.title | default: "LORENZO'S MUSIC" }}</h1>
+            <p class="profile-description">{{ site.data.links.description | default: "Experimental lofi rock band creating unique soundscapes and atmospheric music" }}</p>
+        </div>
+    </div>
+
+    <div class="links-section">
+        <div class="links-grid">
+            {% for link in site.data.links.links %}
+            <a href="{{ link.url }}" 
+               target="{% if link.external %}blank{% else %}_self{% endif %}" 
+               class="link-card {% if link.highlight %}link-highlight{% endif %} {% if link.background_image %}link-with-bg{% endif %}">
+                {% if link.background_image %}
+                <div class="link-bg-image" style="background-image: url('{{ link.background_image | relative_url }}');"></div>
+                {% endif %}
+                <div class="link-content">
+                    {% if link.icon %}
+                    <span class="link-icon">{{ link.icon }}</span>
+                    {% endif %}
+                    <div class="link-text">
+                        <h3 class="link-title">{{ link.title }}</h3>
+                        {% if link.description %}
+                        <p class="link-description">{{ link.description }}</p>
+                        {% endif %}
+                    </div>
+                    {% if link.external %}
+                    <span class="link-external">↗</span>
+                    {% endif %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="links-footer">
+        <div class="social-links-mini">
+            {% if site.twitter_username %}
+            <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" class="social-link-mini">
+                <span class="social-icon-mini">🐦</span>
+            </a>
+            {% endif %}
+            
+            {% if site.bandcamp_username %}
+            <a href="https://{{ site.bandcamp_username }}.bandcamp.com" target="_blank" class="social-link-mini">
+                <span class="social-icon-mini">🎼</span>
+            </a>
+            {% endif %}
+            
+            {% if site.spotify_username %}
+            <a href="https://open.spotify.com/artist/{{ site.spotify_username }}" target="_blank" class="social-link-mini">
+                <span class="social-icon-mini">🎵</span>
+            </a>
+            {% endif %}
+            
+            {% if site.youtube_channel %}
+            <a href="https://youtube.com/{{ site.youtube_channel }}" target="_blank" class="social-link-mini">
+                <span class="social-icon-mini">📺</span>
+            </a>
+            {% endif %}
+            
+            {% if site.instagram_username %}
+            <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" class="social-link-mini">
+                <span class="social-icon-mini">📷</span>
+            </a>
+            {% endif %}
+            
+            {% if site.mastodon_username and site.mastodon_instance %}
+            <a href="https://{{ site.mastodon_instance }}/@{{ site.mastodon_username }}" target="_blank" class="social-link-mini">
+                <span class="social-icon-mini">🐘</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</div> 
