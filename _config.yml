@@ -2,7 +2,7 @@
 title: Lorenzo's Music
 email: info@lorenzosmusic.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Experimental lofi rock band creating unique soundscapes and atmospheric music.
+  Experimental lofi rock band creating open-source music.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lorenzosmusic.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lorenzosmusic
@@ -25,7 +25,7 @@ bandcamp_username: lorenzosmusic
 # Hero Section Configuration
 hero:
   title: "LORENZO'S MUSIC"
-  subtitle: "Experimental lofi rock band creating unique soundscapes and atmospheric music"
+  subtitle: "Experimental lofi rock band creating open-source music"
   background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"  # Desktop background image
   background_image_mobile: "/assets/images/lorenzos-music-square-header-band-image.jpg"  # Mobile background image (optional)
   buttons:
@@ -62,18 +62,20 @@ music:
       image: "/assets/images/album-covers/friction-album-cover-art-lorenzos-music-600px.png"
       spotify_url: "https://open.spotify.com/album/your-ep-id"
       bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/echo-chamber-ep"
-    - title: "Digital Waves"
+    - title: "If I was alone EP"
       year: "2022"
       description: "Electronic meets rock in this experimental collection."
-      image: "/assets/images/digital-waves-album.jpg"
+      image: "/assets/images/album-covers/friction-album-cover-art-lorenzos-music-600px.png"
       spotify_url: "https://open.spotify.com/album/your-album-id"
       bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/digital-waves"
-    - title: "Lofi Sessions"
+    - title: "Rom-Comm Mixtape"
       year: "2021"
       description: "Our debut collection of lofi rock experiments."
-      image: "/assets/images/lofi-sessions-album.jpg"
+      image: "/assets/images/album-covers/friction-album-cover-art-lorenzos-music-600px.png"
       spotify_url: "https://open.spotify.com/album/your-album-id"
       bandcamp_url: "https://lorenzosmusic.bandcamp.com/album/lofi-sessions"
+
+
 
 # Build settings
 markdown: kramdown
