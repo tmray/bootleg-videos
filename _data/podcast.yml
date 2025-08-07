@@ -1,0 +1,66 @@
+# Podcast Page Configuration
+title: "LORENZO'S MUSIC PODCAST"
+description: "Bi-weekly conversations with musicians and creators who make things for musicians. Join us as we explore the world of experimental music and creative collaboration."
+contact_email: "tom@lorenzosmusic.com"
+contact_form_url: "/contact"
+
+# Podcast Platforms - Add your subscription links here
+platforms:
+  - name: "Spotify"
+    description: "Listen on Spotify"
+    url: "https://open.spotify.com/show/41teUSf34DaUAW4Ukk2J7L"
+    icon: "🎧"
+  
+  - name: "Apple Podcasts"
+    description: "Subscribe on Apple Podcasts"
+    url: "https://itunes.apple.com/us/podcast/lorenzos-music-podcast/id1441923662?mt=2&uo=4"
+    icon: "🍎"
+  
+  - name: "YouTube Music"
+    description: "Listen on YouTube Music"
+    url: "https://music.youtube.com/playlist?list=PLbvJrJ34c9MmVSGE4nMSU_KXCR5Bgm-P6"
+    icon: "📱"
+  
+  - name: "YouTube"
+    description: "Watch on YouTube"
+    url: "https://youtube.com/playlist?list=PLbvJrJ34c9MmVSGE4nMSU_KXCR5Bgm-P6&si=T-ua90cew9PePQpG"
+    icon: "📺"
+  
+  - name: "RSS Feed"
+    description: "RSS Feed for podcast apps"
+    url: "https://anchor.fm/s/7a0e054/podcast/rss"
+    icon: "📡"
+  
+  # - name: "Bandcamp"
+  #   description: "Listen on Bandcamp"
+  #   url: "https://lorenzosmusic.bandcamp.com/podcast"
+  #   icon: "🎼"
+
+# Podcast episodes are now managed through blog posts with category: podcast
+# Create posts in _posts/ with categories: [podcast] to add episodes
+# Example post format:
+# ---
+# layout: post
+# title: "Episode Title"
+# date: 2024-01-15
+# categories: [podcast]
+# guest: "Guest Name"
+# episode_number: "15"
+# episode_image: "https://example.com/image.jpg"
+# audio_url: "https://anchor.fm/your-podcast/episodes/episode-15"
+# transcript_url: "/podcast/episode-transcript"
+# ---
+
+# Podcast Stats (optional)
+stats:
+  - number: "60"
+    label: "Episodes"
+  
+  - number: "43"
+    label: "Guests"
+  
+  - number: "1.3k"
+    label: "Downloads"
+  
+  - number: "5"
+    label: "Rating"
