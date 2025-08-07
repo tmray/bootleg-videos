@@ -8,27 +8,27 @@ contact_form_url: "/contact"
 platforms:
   - name: "Spotify"
     description: "Listen on Spotify"
-    url: "https://open.spotify.com/show/your-podcast-id"
+    url: "https://open.spotify.com/show/41teUSf34DaUAW4Ukk2J7L"
     icon: "🎧"
   
   - name: "Apple Podcasts"
     description: "Subscribe on Apple Podcasts"
-    url: "https://podcasts.apple.com/podcast/your-podcast-id"
+    url: "https://itunes.apple.com/us/podcast/lorenzos-music-podcast/id1441923662?mt=2&uo=4"
     icon: "🍎"
   
   - name: "YouTube Music"
     description: "Listen on YouTube Music"
-    url: "https://podcasts.google.com/feed/your-feed-url"
+    url: "https://music.youtube.com/playlist?list=PLbvJrJ34c9MmVSGE4nMSU_KXCR5Bgm-P6"
     icon: "📱"
   
   - name: "YouTube"
     description: "Watch on YouTube"
-    url: "https://youtube.com/playlist?list=your-playlist-id"
+    url: "https://youtube.com/playlist?list=PLbvJrJ34c9MmVSGE4nMSU_KXCR5Bgm-P6&si=T-ua90cew9PePQpG"
     icon: "📺"
   
   - name: "RSS Feed"
     description: "RSS Feed for podcast apps"
-    url: "https://lorenzosmusic.com/feed/podcast.xml"
+    url: "https://anchor.fm/s/7a0e054/podcast/rss"
     icon: "📡"
   
   # - name: "Bandcamp"
@@ -53,14 +53,14 @@ platforms:
 
 # Podcast Stats (optional)
 stats:
-  - number: "15"
+  - number: "60"
     label: "Episodes"
   
-  - number: "12"
+  - number: "43"
     label: "Guests"
   
-  - number: "2.5k"
+  - number: "1.3k"
     label: "Downloads"
   
-  - number: "4.8"
+  - number: "5"
     label: "Rating"

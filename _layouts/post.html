@@ -33,6 +33,25 @@ layout: default
                 {% endfor %}
                 {% endif %}
             </div>
+            
+            <!-- Podcast Subscription Section -->
+            {% if page.categories contains 'podcast' %}
+            <div class="podcast-subscribe-section">
+                <h3 class="subscribe-title">Subscribe to the Podcast</h3>
+                <p class="subscribe-description">Never miss an episode! Subscribe on your favorite platform.</p>
+                <div class="platform-grid-small">
+                    {% for platform in site.data.podcast.platforms %}
+                    <a href="{{ platform.url }}" target="_blank" class="platform-card-small">
+                        <div class="platform-icon-small">{{ platform.icon }}</div>
+                        <div class="platform-info-small">
+                            <span class="platform-name-small">{{ platform.name }}</span>
+                        </div>
+                        <span class="platform-arrow-small">↗</span>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
         </div>
     </footer>
 </article> 

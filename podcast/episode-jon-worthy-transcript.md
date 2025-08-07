@@ -1,5 +1,6 @@
 ---
-
+layout: post
+categories: [podcast]
 ---
 Block Sonic Net is doing another call out for remixers and producers
 
