@@ -1914,6 +1914,405 @@ a:hover {
     .social-icon-mini {
         font-size: 1.8rem;
     }
+}
+
+/* Podcast Page Styles */
+.podcast-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.podcast-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--vhs-dark-gray);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    position: relative;
+    overflow: hidden;
+}
+
+.podcast-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.podcast-intro {
+    position: relative;
+    z-index: 2;
+}
+
+.podcast-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--flickering-cyan);
+    text-shadow: 2px 2px 0px var(--distorted-purple);
+}
+
+.podcast-description {
+    font-size: 1.2rem;
+    color: var(--off-white-beige);
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Subscribe Section */
+.subscribe-section {
+    margin-bottom: 4rem;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.platform-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.platform-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+}
+
+.platform-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.platform-info {
+    flex: 1;
+    z-index: 2;
+    position: relative;
+}
+
+.platform-name {
+    font-size: 1.2rem;
+    margin: 0 0 0.25rem 0;
+    color: var(--off-white-beige);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.platform-description {
+    font-size: 0.9rem;
+    margin: 0;
+    color: var(--washed-out-grey);
+}
+
+.platform-arrow {
+    font-size: 1.2rem;
+    color: var(--flickering-cyan);
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+}
+
+/* Episodes Section */
+.episodes-section {
+    margin-bottom: 4rem;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.episode-card {
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.episode-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 12px 20px rgba(0, 255, 255, 0.3);
+}
+
+.episode-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.episode-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.1) 2px,
+            rgba(140, 140, 140, 0.1) 4px
+        );
+    z-index: 1;
+}
+
+.episode-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(30%) saturate(120%) contrast(110%) brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.episode-card:hover .episode-img {
+    filter: sepia(20%) saturate(130%) contrast(120%) brightness(0.95);
+}
+
+.episode-content {
+    padding: 1.5rem;
+}
+
+.episode-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+}
+
+.episode-number {
+    color: var(--flickering-cyan);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.episode-date {
+    color: var(--washed-out-grey);
+    font-size: 0.9rem;
+}
+
+.episode-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--off-white-beige);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.episode-description {
+    color: var(--off-white-beige);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+}
+
+.episode-guest {
+    color: var(--distorted-purple);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.episode-links {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Stats Section */
+.stats-section {
+    margin-bottom: 4rem;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--flickering-cyan);
+    text-shadow: 2px 2px 0px var(--distorted-purple);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.stat-label {
+    color: var(--off-white-beige);
+    font-size: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+/* Contact Section */
+.podcast-contact {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--vhs-dark-gray);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    position: relative;
+    overflow: hidden;
+}
+
+.podcast-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.contact-description {
+    color: var(--off-white-beige);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+/* Mobile optimization for podcast page */
+@media (max-width: 768px) {
+    .podcast-title {
+        font-size: 2rem;
+    }
+    
+    .podcast-description {
+        font-size: 1rem;
+    }
+    
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .podcast-title {
+        font-size: 1.6rem;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
 } 
 
 /* Post Layout Styles */

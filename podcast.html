@@ -1,0 +1,101 @@
+---
+layout: page
+title: Podcast
+subtitle: Lorenzo's Music Podcast
+---
+
+<div class="podcast-content">
+    <div class="podcast-header">
+        <div class="podcast-intro">
+            <h1 class="podcast-title">{{ site.data.podcast.title | default: "LORENZO'S MUSIC PODCAST" }}</h1>
+            <p class="podcast-description">{{ site.data.podcast.description | default: "Bi-weekly conversations with musicians and creators who make things for musicians. Join us as we explore the world of experimental music and creative collaboration." }}</p>
+        </div>
+    </div>
+
+    <!-- Subscribe Section -->
+    <div class="subscribe-section">
+        <h2 class="section-title">Subscribe to the Podcast</h2>
+        <div class="platform-grid">
+            {% for platform in site.data.podcast.platforms %}
+            <a href="{{ platform.url }}" target="_blank" class="platform-card">
+                <div class="platform-icon">{{ platform.icon }}</div>
+                <div class="platform-info">
+                    <h3 class="platform-name">{{ platform.name }}</h3>
+                    <p class="platform-description">{{ platform.description }}</p>
+                </div>
+                <span class="platform-arrow">↗</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Recent Episodes -->
+    <div class="episodes-section">
+        <h2 class="section-title">Recent Episodes</h2>
+        <div class="episodes-grid">
+            {% assign podcast_posts = site.posts | where: "categories", "podcast" | sort: "date" | reverse %}
+            {% for post in podcast_posts limit: 10 %}
+            <div class="episode-card">
+                {% if post.episode_image %}
+                <div class="episode-image">
+                    <img src="{{ post.episode_image }}" alt="{{ post.title }}" class="episode-img">
+                </div>
+                {% elsif post.image %}
+                <div class="episode-image">
+                    <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="episode-img">
+                </div>
+                {% endif %}
+                <div class="episode-content">
+                    <div class="episode-meta">
+                        {% if post.episode_number %}
+                        <span class="episode-number">Episode {{ post.episode_number }}</span>
+                        {% else %}
+                        <span class="episode-number">Episode {{ forloop.index }}</span>
+                        {% endif %}
+                        <span class="episode-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                    </div>
+                    <h3 class="episode-title">{{ post.title }}</h3>
+                    <p class="episode-description">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+                    {% if post.guest %}
+                    <p class="episode-guest">Featuring: {{ post.guest }}</p>
+                    {% endif %}
+                    <div class="episode-links">
+                        {% if post.audio_url %}
+                        <a href="{{ post.audio_url }}" target="_blank" class="btn btn-primary btn-small">Listen</a>
+                        {% endif %}
+                        {% if post.transcript_url %}
+                        <a href="{{ post.transcript_url }}" class="btn btn-outline btn-small">Transcript</a>
+                        {% endif %}
+                        <a href="{{ post.url }}" class="btn btn-secondary btn-small">Show Notes</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Podcast Stats -->
+    {% if site.data.podcast.stats %}
+    <div class="stats-section">
+        <h2 class="section-title">Podcast Stats</h2>
+        <div class="stats-grid">
+            {% for stat in site.data.podcast.stats %}
+            <div class="stat-card">
+                <div class="stat-number">{{ stat.number }}</div>
+                <div class="stat-label">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Contact Section -->
+    <div class="podcast-contact">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="contact-description">Have a guest suggestion or want to be on the show? We'd love to hear from you!</p>
+        <div class="contact-links">
+            <a href="mailto:{{ site.data.podcast.contact_email | default: site.email }}" class="btn btn-primary">Email Us</a>
+            <a href="{{ site.data.podcast.contact_form_url | default: '/contact' }}" class="btn btn-outline">Contact Form</a>
+        </div>
+    </div>
+</div>

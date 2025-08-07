@@ -298,5 +298,5 @@ debug: true
 
 ---
 
-**Last Updated**: January 2024
+**Last Updated**: August 2025
 **Version**: 1.0 
