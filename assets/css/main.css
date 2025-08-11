@@ -2457,6 +2457,618 @@ a:hover {
     .platform-name-small {
         font-size: 0.9rem;
     }
+}
+
+/* Live Show Page Styles */
+.live-show-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* Hero Section */
+.live-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 2rem;
+    background-color: var(--vhs-dark-gray);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    position: relative;
+    overflow: hidden;
+}
+
+.live-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.live-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.live-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--flickering-cyan);
+    text-shadow: 2px 2px 0px var(--distorted-purple);
+}
+
+.live-subtitle {
+    font-size: 1.3rem;
+    color: var(--off-white-beige);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.live-schedule {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.schedule-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: var(--dark-static-black);
+    border: 2px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 3px) 0, 100% 3px, 100% 100%, 3px 100%, 0 calc(100% - 3px));
+}
+
+.schedule-icon {
+    font-size: 1.2rem;
+}
+
+.schedule-text {
+    color: var(--off-white-beige);
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.live-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+    .btn-icon {
+        margin-right: 0.5rem;
+    }
+
+    /* YouTube Embed Section */
+    .youtube-embed-section {
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .youtube-embed-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: 2rem auto;
+        background-color: var(--dark-static-black);
+        border: 3px solid var(--washed-out-grey);
+        border-radius: 0;
+        clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+        overflow: hidden;
+        position: relative;
+    }
+
+    .youtube-embed-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: 
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(140, 140, 140, 0.05) 2px,
+                rgba(140, 140, 140, 0.05) 4px
+            );
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    .youtube-embed-container iframe {
+        position: relative;
+        width: 100%;
+        height: 450px;
+        border: none;
+        z-index: 2;
+        filter: sepia(20%) saturate(120%) contrast(110%) brightness(0.95);
+        transition: all 0.3s ease;
+    }
+
+    .youtube-embed-container:hover iframe {
+        filter: sepia(10%) saturate(130%) contrast(120%) brightness(1);
+    }
+
+    .embed-cta {
+        margin-top: 1.5rem;
+    }
+
+    /* Expectations Section */
+.expectations-section {
+    margin-bottom: 4rem;
+}
+
+.expectations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.expectation-card {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.expectation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.expectation-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+}
+
+.expectation-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.expectation-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--flickering-cyan);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+    position: relative;
+    z-index: 2;
+}
+
+.expectation-description {
+    color: var(--off-white-beige);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+/* Episodes Section */
+.episodes-section {
+    margin-bottom: 4rem;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.episode-card {
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.episode-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 12px 20px rgba(0, 255, 255, 0.3);
+}
+
+.episode-thumbnail {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.episode-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(30%) saturate(120%) contrast(110%) brightness(0.9);
+    transition: all 0.3s ease;
+}
+
+.episode-card:hover .episode-img {
+    filter: sepia(20%) saturate(130%) contrast(120%) brightness(0.95);
+}
+
+.episode-overlay {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 3px) 0, 100% 3px, 100% 100%, 3px 100%, 0 calc(100% - 3px));
+}
+
+.episode-duration {
+    color: var(--off-white-beige);
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.episode-content {
+    padding: 1.5rem;
+}
+
+.episode-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--off-white-beige);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.episode-date {
+    color: var(--flickering-cyan);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.episode-description {
+    color: var(--off-white-beige);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.episode-links {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.episodes-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* How to Watch Section */
+.how-to-watch-section {
+    margin-bottom: 4rem;
+}
+
+.platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.platform-card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.platform-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.platform-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--flickering-cyan);
+    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+}
+
+.platform-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+}
+
+.platform-content {
+    flex: 1;
+    z-index: 2;
+    position: relative;
+}
+
+.platform-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--flickering-cyan);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.platform-description {
+    color: var(--off-white-beige);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.platform-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.platform-feature {
+    background-color: var(--vhs-dark-gray);
+    color: var(--off-white-beige);
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--washed-out-grey);
+    border-radius: 0;
+    font-size: 0.8rem;
+    clip-path: polygon(0 0, calc(100% - 3px) 0, 100% 3px, 100% 100%, 3px 100%, 0 calc(100% - 3px));
+}
+
+/* Community Section */
+.community-section {
+    margin-bottom: 4rem;
+    padding: 3rem 2rem;
+    background-color: var(--vhs-dark-gray);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    position: relative;
+    overflow: hidden;
+}
+
+.community-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.community-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.community-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--flickering-cyan);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.community-text p {
+    color: var(--off-white-beige);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.community-features {
+    list-style: none;
+    padding: 0;
+}
+
+.community-features li {
+    color: var(--off-white-beige);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.community-cta {
+    text-align: center;
+}
+
+.cta-note {
+    color: var(--washed-out-grey);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+/* Reminder Section */
+.reminder-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--dark-static-black);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    position: relative;
+    overflow: hidden;
+}
+
+.reminder-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(140, 140, 140, 0.05) 2px,
+            rgba(140, 140, 140, 0.05) 4px
+        );
+    z-index: 1;
+}
+
+.reminder-content {
+    position: relative;
+    z-index: 2;
+}
+
+.reminder-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--flickering-cyan);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.reminder-text p {
+    color: var(--off-white-beige);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.reminder-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Mobile optimization for live show page */
+@media (max-width: 768px) {
+    .live-title {
+        font-size: 2rem;
+    }
+    
+    .live-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .live-schedule {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .live-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .expectations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .episodes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .platforms-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .community-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .reminder-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .youtube-embed-container iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .live-title {
+        font-size: 1.6rem;
+    }
+    
+    .live-subtitle {
+        font-size: 1rem;
+    }
+    
+    .platform-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .platform-icon {
+        margin-bottom: 1rem;
+    }
 } 
 
 /* Post Layout Styles */

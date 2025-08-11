@@ -1,0 +1,107 @@
+# Live Show Configuration
+title: "LORENZO'S MUSIC THE LIVE & UNFILTERED SHOW"
+subtitle: "Live from our studio every Wednesday at 9 PM Central"
+youtube_channel: "https://youtube.com/@lorenzosmusic"
+youtube_playlist: "https://youtube.com/playlist?list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+youtube_playlist_embed: "https://www.youtube.com/embed/videoseries?list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+calendar_url: "https://calendar.google.com/calendar/event?action=TEMPLATE&text=Lorenzo's+Music+Live+Show&dates=20240115T210000Z/20240115T230000Z&details=Live+from+our+studio+every+Wednesday+at+9+PM+Central&location=https://youtube.com/@lorenzosmusic"
+
+# What to Expect Section
+expectations:
+  - icon: "🎸"
+    title: "Live Band Practice"
+    description: "Watch us rehearse our actual setlist and work on new material in real-time."
+  
+  - icon: "💬"
+    title: "Interactive Chat"
+    description: "Join the conversation! Ask questions, request songs, and chat with the band live."
+  
+  - icon: "🎼"
+    title: "Songwriting Sessions"
+    description: "See the creative process unfold as we write and develop new songs together."
+  
+  - icon: "🎪"
+    title: "Behind the Scenes"
+    description: "Get an unfiltered look at our studio setup, gear, and band dynamics."
+  
+  - icon: "🎵"
+    title: "Music Requests"
+    description: "Request your favorite songs from our catalog during the live stream."
+  
+  - icon: "🎤"
+    title: "Q&A Sessions"
+    description: "Ask us about our music, gear, songwriting process, or anything else!"
+
+# Latest Episodes (add your recent episodes here)
+episodes:
+  - title: "Episode 60 - New Song Writing Session"
+    date: "2024-01-10"
+    duration: "1:45:32"
+    description: "We work on a new experimental track and take song requests from chat."
+    thumbnail: "https://i.ytimg.com/vi/example1/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=example1"
+    youtube_music_url: "https://music.youtube.com/watch?v=example1"
+  
+  - title: "Episode 59 - Full Set Rehearsal"
+    date: "2024-01-03"
+    duration: "2:15:45"
+    description: "Complete run-through of our current setlist with live chat interaction."
+    thumbnail: "https://i.ytimg.com/vi/example2/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=example2"
+    youtube_music_url: "https://music.youtube.com/watch?v=example2"
+  
+  - title: "Episode 58 - Gear Talk & Jamming"
+    date: "2023-12-27"
+    duration: "1:30:18"
+    description: "We discuss our equipment setup and jam on some covers requested by viewers."
+    thumbnail: "https://i.ytimg.com/vi/example3/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=example3"
+    youtube_music_url: "https://music.youtube.com/watch?v=example3"
+  
+  - title: "Episode 57 - Holiday Special"
+    date: "2023-12-20"
+    duration: "1:55:22"
+    description: "Festive edition with holiday covers and special guest appearances."
+    thumbnail: "https://i.ytimg.com/vi/example4/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=example4"
+    youtube_music_url: "https://music.youtube.com/watch?v=example4"
+  
+  - title: "Episode 56 - Acoustic Session"
+    date: "2023-12-13"
+    duration: "1:20:15"
+    description: "Stripped-down acoustic versions of our songs and intimate Q&A."
+    thumbnail: "https://i.ytimg.com/vi/example5/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=example5"
+    youtube_music_url: "https://music.youtube.com/watch?v=example5"
+  
+  - title: "Episode 55 - Experimental Night"
+    date: "2023-12-06"
+    duration: "2:05:33"
+    description: "We experiment with new sounds and effects while chatting with viewers."
+    thumbnail: "https://i.ytimg.com/vi/example6/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=example6"
+    youtube_music_url: "https://music.youtube.com/watch?v=example6"
+
+# How to Watch & Listen Platforms
+platforms:
+  - name: "YouTube"
+    title: "Watch Live & Replays"
+    description: "Catch our live streams and watch all previous episodes with video."
+    icon: "📺"
+    url: "https://youtube.com/@lorenzosmusic"
+    features:
+      - "Live streaming every Wednesday"
+      - "Full video replays"
+      - "Live chat interaction"
+      - "HD quality video"
+  
+  - name: "YouTube Music"
+    title: "Listen as Podcast"
+    description: "Audio-only version available as a podcast on YouTube Music."
+    icon: "🎧"
+    url: "https://music.youtube.com/playlist?list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    features:
+      - "Audio-only podcast format"
+      - "Background listening"
+      - "Download for offline"
+      - "Playlist organization"

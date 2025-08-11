@@ -1,0 +1,170 @@
+---
+layout: page
+title: Live Show
+subtitle: Lorenzo's Music The Live & Unfiltered Show
+---
+
+<div class="live-show-content">
+    <!-- Hero Section -->
+    <div class="live-hero">
+        <div class="live-hero-content">
+            <h1 class="live-title">{{ site.data.live_show.title | default: "LORENZO'S MUSIC THE LIVE & UNFILTERED SHOW" }}</h1>
+            <p class="live-subtitle">{{ site.data.live_show.subtitle | default: "Live from our studio every Wednesday at 9 PM Central" }}</p>
+            <div class="live-schedule">
+                <div class="schedule-item">
+                    <span class="schedule-icon">📅</span>
+                    <span class="schedule-text">Every Wednesday</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-icon">🕘</span>
+                    <span class="schedule-text">9:00 PM Central</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="schedule-icon">🎥</span>
+                    <span class="schedule-text">Live on YouTube</span>
+                </div>
+            </div>
+            <div class="live-cta-buttons">
+                <a href="{{ site.data.live_show.youtube_channel }}" target="_blank" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📺</span>
+                    Subscribe to Channel
+                </a>
+                <a href="{{ site.data.live_show.youtube_playlist }}" target="_blank" class="btn btn-secondary btn-large">
+                    <span class="btn-icon">📋</span>
+                    Watch Replays
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Playlist Embed -->
+    <div class="youtube-embed-section">
+        <h2 class="section-title">Latest Episode</h2>
+        <div class="youtube-embed-container">
+            <iframe 
+                src="{{ site.data.live_show.youtube_playlist_embed }}"
+                title="Lorenzo's Music The Live & Unfiltered Show"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="embed-cta">
+            <a href="{{ site.data.live_show.youtube_playlist }}" target="_blank" class="btn btn-outline">
+                <span class="btn-icon">📺</span>
+                View All Episodes
+            </a>
+        </div>
+    </div>
+
+    <!-- What to Expect Section -->
+    <div class="expectations-section">
+        <h2 class="section-title">What to Expect</h2>
+        <div class="expectations-grid">
+            {% for expectation in site.data.live_show.expectations %}
+            <div class="expectation-card">
+                <div class="expectation-icon">{{ expectation.icon }}</div>
+                <h3 class="expectation-title">{{ expectation.title }}</h3>
+                <p class="expectation-description">{{ expectation.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Latest Episodes -->
+    <div class="episodes-section">
+        <h2 class="section-title">Latest Episodes</h2>
+        <div class="episodes-grid">
+            {% for episode in site.data.live_show.episodes limit: 6 %}
+            <div class="episode-card">
+                <div class="episode-thumbnail">
+                    <img src="{{ episode.thumbnail }}" alt="{{ episode.title }}" class="episode-img">
+                    <div class="episode-overlay">
+                        <span class="episode-duration">{{ episode.duration }}</span>
+                    </div>
+                </div>
+                <div class="episode-content">
+                    <h3 class="episode-title">{{ episode.title }}</h3>
+                    <p class="episode-date">{{ episode.date }}</p>
+                    <p class="episode-description">{{ episode.description }}</p>
+                    <div class="episode-links">
+                        <a href="{{ episode.youtube_url }}" target="_blank" class="btn btn-primary btn-small">Watch</a>
+                        <a href="{{ episode.youtube_music_url }}" target="_blank" class="btn btn-outline btn-small">Listen</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="episodes-cta">
+            <a href="{{ site.data.live_show.youtube_playlist }}" target="_blank" class="btn btn-secondary">View All Episodes</a>
+        </div>
+    </div>
+
+    <!-- How to Watch Section -->
+    <div class="how-to-watch-section">
+        <h2 class="section-title">How to Watch & Listen</h2>
+        <div class="platforms-grid">
+            {% for platform in site.data.live_show.platforms %}
+            <div class="platform-card">
+                <div class="platform-icon">{{ platform.icon }}</div>
+                <div class="platform-content">
+                    <h3 class="platform-title">{{ platform.title }}</h3>
+                    <p class="platform-description">{{ platform.description }}</p>
+                    <div class="platform-features">
+                        {% for feature in platform.features %}
+                        <span class="platform-feature">{{ feature }}</span>
+                        {% endfor %}
+                    </div>
+                    <a href="{{ platform.url }}" target="_blank" class="btn btn-primary">Go to {{ platform.name }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Chat & Community Section -->
+    <div class="community-section">
+        <h2 class="section-title">Join the Community</h2>
+        <div class="community-content">
+            <div class="community-text">
+                <h3>Live Chat During Shows</h3>
+                <p>Join the conversation during our live streams! Chat with us and other viewers in real-time. Ask questions, request songs, or just say hello!</p>
+                <ul class="community-features">
+                    <li>🎵 Request songs from our setlist</li>
+                    <li>💬 Chat with the band live</li>
+                    <li>🎸 Ask about our gear and setup</li>
+                    <li>🎼 Get songwriting insights</li>
+                    <li>🎪 Be part of the creative process</li>
+                </ul>
+            </div>
+            <div class="community-cta">
+                <a href="{{ site.data.live_show.youtube_channel }}" target="_blank" class="btn btn-primary btn-large">
+                    <span class="btn-icon">💬</span>
+                    Join Live Chat
+                </a>
+                <p class="cta-note">Click the notification bell to get reminded when we go live!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reminder Section -->
+    <div class="reminder-section">
+        <h2 class="section-title">Never Miss a Show</h2>
+        <div class="reminder-content">
+            <div class="reminder-text">
+                <h3>Set Your Reminders</h3>
+                <p>Don't miss out on the live experience! Set up notifications to know when we go live every Wednesday at 9 PM Central.</p>
+            </div>
+            <div class="reminder-buttons">
+                <a href="{{ site.data.live_show.youtube_channel }}" target="_blank" class="btn btn-primary">
+                    <span class="btn-icon">🔔</span>
+                    Subscribe & Notify
+                </a>
+                <a href="{{ site.data.live_show.calendar_url }}" target="_blank" class="btn btn-outline">
+                    <span class="btn-icon">📅</span>
+                    Add to Calendar
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
