@@ -1,15 +1,14 @@
 ---
 layout: post
-title: "Jon Worthy - From Creative Commons to Full-Time Musician"
-date: 2024-01-15
+title: "Andre Michelle - Innovating Music Creation with OpenDAW"
+date: 2025-07-18
 categories: [podcast]
-tags: [interview, Jon Worthy, musician]
 author: "Tom Ray"
-excerpt: "I meet Jon Worthy, a Nashville-based Creative Commons musician who has built a successful career through open licensing and community building."
-guest: "Jon Worthy"
+excerpt: "In this episode of Lorenzo's Music Podcast, I meet Andre Michelle, an innovative creator in the music technology space, to discuss his latest project, OpenDaw."
+guest: "Andre Michelle"
 episode_number: "15"
-episode_image: "https://i.ytimg.com/vi/13rmoFhDnxk/maxresdefault.jpg"
-audio_url: "https://anchor.fm/lorenzosmusic/episodes/Basspistol---Music--Promotion-and-Navigating-The-Fediverse-e369vbj"
+episode_image: "https://i.ytimg.com/vi/BMxGaW4_p-o/maxresdefault.jpg"
+audio_url: "https://creators.spotify.com/pod/profile/lorenzosmusic/episodes/Andr-Michelle-Innovating-Music-Creation-with-OpenDAW-e35k431/a-ac27ggk"
 transcript_url: "/podcast/episode-jon-worthy-transcript"
 ---
 <div class="video-card">
@@ -17,20 +16,20 @@ transcript_url: "/podcast/episode-jon-worthy-transcript"
         <iframe
             width="100%"
             height="315"
-            src="https://www.youtube.com/embed/13rmoFhDnxk"
-            title="Jon Worthy - From Creative Commons to Full-Time Musician"
+            src="https://www.youtube.com/embed/BMxGaW4_p-o"
+            title="Andre Michelle - Innovating Music Creation with OpenDAW"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>
     </div>
     <div class="video-info">
-        <h3>Jon Worthy - From Creative Commons to Full-Time Musician</h3>
-        <p>The Lorenzo's Music Podcast with musician Jon Worthy</p>
+        <h3>Andre Michelle - Innovating Music Creation with OpenDAW</h3>
+        <p>The Lorenzo's Music Podcast with Andre Michelle creator of Open Daw</p>
     </div>
 </div>
 
-## Jon Worthy - From Creative Commons to Full-Time Musician
+## Episode 15: Jon Worthy - From Creative Commons to Full-Time Musician
 
 In this episode, I sit down with **Jon Worthy**, a Nashville-based musician who has successfully built a full-time career through Creative Commons licensing and community building.
 
@@ -70,6 +69,3 @@ Jon Worthy is a musician, producer, and advocate for open-source music. He's kno
 *This episode was recorded on January 15, 2024. Special thanks to Jon Worthy for sharing his insights and experiences with us.*
 
 *Listen to the full episode on your favorite podcast platform or click the "Listen" button above.*
-
-
-

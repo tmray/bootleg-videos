@@ -1,16 +1,33 @@
 ---
 layout: post
-title: "Jon Worthy - From Creative Commons to Full-Time Musician"
-date: 2024-01-15
+title: "Basspistol - Music, Promotion and Navigating the Fediverse"
+date: 2025-08-01
 categories: [podcast]
-author: "Lorenzo"
-excerpt: "I meet Jon Worthy, a Nashville-based Creative Commons musician who has built a successful career through open licensing and community building."
-guest: "Gabe Kangas"
+author: "Tom Ray"
+excerpt: "In this episode of Lorenzo's Music Podcast, I sit down with Setto, a multifaceted musician and entrepreneur who runs the innovative platform Basspistol."
+guest: "Setto"
 episode_number: "15"
-episode_image: "https://i.ytimg.com/vi/13rmoFhDnxk/maxresdefault.jpg"
-audio_url: "https://anchor.fm/lorenzosmusic/episodes/Basspistol---Music--Promotion-and-Navigating-The-Fediverse-e369vbj"
+episode_image: "https://i.ytimg.com/vi/pwmFnWG6BEY/maxresdefault.jpg"
+audio_url: "https://creators.spotify.com/pod/profile/lorenzosmusic/episodes/Basspistol---Music--Promotion-and-Navigating-The-Fediverse-e369vbj/a-ac33esb"
 transcript_url: "/podcast/episode-jon-worthy-transcript"
 ---
+<div class="video-card">
+    <div class="video-embed">
+        <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/pwmFnWG6BEY"
+            title="Basspistol - Music, Promotion and Navigating the Fediverse"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+    <div class="video-info">
+        <h3>Basspistol - Music, Promotion and Navigating the Fediverse</h3>
+        <p>The Lorenzo's Music Podcast with Setto the person behind Basspistol</p>
+    </div>
+</div>
 
 ## Episode 15: Jon Worthy - From Creative Commons to Full-Time Musician
 
