@@ -53,14 +53,14 @@ Resurrectionists, Joe Cannon, Jeff Brueggeman, Josh Barto, and Dr. Science, are 
 3. **Music Release Strategy:** releasing music in the digital age.
 4. **Project Management:** managing multiple bands and booking shows.
 
-### Connect with Jon
+### Connect with Resurrectionists
 
 - **Bandcamp**: [resurrectionistsmke.bandcamp.com](https://resurrectionistsmke.bandcamp.com)
 - **Instagram**: [@resurrectionists_mke](https://instagram.com/resurrectionists_mke)
 
 ---
 
-*This episode was recorded on June 29, 2025. Special thanks to Joe Cannon for sharing his insights and experiences with me.*
+*This episode was recorded on June 29, 2025. Special thanks to Joe Cannon of Resurrectionists for sharing his insights and experiences with me.*
 
 *Listen to the full episode on your favorite podcast platform or watch the video above.*
 

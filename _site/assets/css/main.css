@@ -80,6 +80,7 @@ a {
     text-decoration: none;
     transition: all 0.3s ease;
     text-transform: uppercase;
+    word-wrap: break-word;
     text-shadow: 1px 1px 0px var(--distorted-purple);
 }
 
