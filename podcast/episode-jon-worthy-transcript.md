@@ -2,7 +2,7 @@
 layout: post
 categories: [podcast]
 ---
-Block Sonic Net is doing another call out for remixers and producers
+BlocSonic is doing another call out for remixers and producers
 
 Tom Ray: Before we get started with this episode, a quick announcement. Last year we released a remix album on the Block Sonic Net label which featured remixes of our releases by different artists. And this year we are doing that once again. So right now we are doing another call out for remixers, musicians and producers. So if you want to remix one of our songs, get featured on the album, kind of just really be part of this open source Creative Commons netl label community, then all you need to do is go to lorenzomusic.blocksonic.com and you can check out the different songs that you can remix and also download the stems with the notes and the information about the different tracks. And just to note, we would like to have these entries in by the middle of June so we can get them ready for the July release on netl label day. So once again go to lorenzomusic.blocksonic.com to find out more.
 

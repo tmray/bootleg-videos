@@ -10,7 +10,7 @@ guest: "Joe Cannon"
 episode_number: "15"
 episode_image: "https://i.ytimg.com/vi/FgWR3eB3Y_w/maxresdefault.jpg"
 audio_url: "https://creators.spotify.com/pod/profile/lorenzosmusic/episodes/Joe-Cannon-of-Resurrectionists---From-Punk-Roots-to-Chamber-Americana-e36pt87"
-transcript_url: "/podcast/episode-jon-worthy-transcript"
+transcript_url: "/podcast/episode-resurrectionists-transcript"
 ---
 <div class="video-card">
     <div class="video-embed">
@@ -30,46 +30,39 @@ transcript_url: "/podcast/episode-jon-worthy-transcript"
     </div>
 </div>
 
-## Jon Worthy - From Creative Commons to Full-Time Musician
+## Joe Cannon - Resurrectionists - From Punk Roots to Chamber Americana
 
-In this episode, I sit down with **Jon Worthy**, a Nashville-based musician who has successfully built a full-time career through Creative Commons licensing and community building.
+In this episode of the podcast, I talk with **Joe Cannon** of the band **Resurrectionists**. Based in Milwaukee, the band blends genres in their new EP, "_Anytime You Make a Place for Them._" The EP includes an Oracle deck that serves as a creative extension of the music. Joe shares how the idea came about and how it reflects the band's artistic vision.
 
-### About Jon Worthy
+### About Resurrectionists
 
-Jon Worthy is a musician, producer, and advocate for open-source music. He's known for his work in the Creative Commons community and his innovative approach to music distribution and promotion.
+Resurrectionists, Joe Cannon, Jeff Brueggeman, Josh Barto, and Dr. Science, are a band from Milwaukee, Wisconsin. The band is self-described as “Doom Chamber-Americana,” .
 
 ### What We Discuss
 
-- **Creative Commons Licensing**: How Jon uses open licensing to build his audience
-- **Community Building**: Strategies for connecting with listeners and other musicians
-- **Music Promotion**: Alternative approaches to traditional music marketing
-- **The Fediverse**: Exploring decentralized social media for musicians
-- **Building a Sustainable Career**: Tips for making a living as an independent musician
+- **Academia to Music:** teaching philosophy to working in bands.
+- **Resurrectionists:** The band's formation, evolution, and unique name.
+- **Creative Process:** Insights into songwriting and recording for their latest EP.
+- **Oracle Deck:** Artistic pairing of an Oracle deck with their music.
+- **Digital Challenges:** Navigating music release in the streaming era.
 
 ### Key Takeaways
 
-1. **Open licensing can be a powerful tool** for building community and getting your music heard
-2. **Authentic connections** with listeners are more valuable than follower counts
-3. **The fediverse offers new opportunities** for musicians to connect with audiences
-4. **Consistency and quality** are key to building a sustainable music career
-
-### Links Mentioned
-
-- [Jon Worthy's Music](https://jonworthy.bandcamp.com)
-- [Creative Commons](https://creativecommons.org)
-- [Mastodon](https://joinmastodon.org)
+1. **Creative Marketing:** Oracle deck art and mech.
+2. **Collaboration:** songwriting and band dynamics.
+3. **Music Release Strategy:** releasing music in the digital age.
+4. **Project Management:** managing multiple bands and booking shows.
 
 ### Connect with Jon
 
-- **Bandcamp**: [jonworthy.bandcamp.com](https://jonworthy.bandcamp.com)
-- **Mastodon**: [@jonworthy@mastodon.social](https://mastodon.social/@jonworthy)
-- **Website**: [jonworthy.com](https://jonworthy.com)
+- **Bandcamp**: [resurrectionistsmke.bandcamp.com](https://resurrectionistsmke.bandcamp.com)
+- **Instagram**: [@resurrectionists_mke](https://instagram.com/resurrectionists_mke)
 
 ---
 
-*This episode was recorded on January 15, 2024. Special thanks to Jon Worthy for sharing his insights and experiences with us.*
+*This episode was recorded on June 29, 2025. Special thanks to Joe Cannon for sharing his insights and experiences with me.*
 
-*Listen to the full episode on your favorite podcast platform or click the "Listen" button above.*
+*Listen to the full episode on your favorite podcast platform or watch the video above.*
 
 
 
