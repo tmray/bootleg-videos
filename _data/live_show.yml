@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Watch out for birds! Live Band Practice - ep45"
+    date: "2025-08-13"
+    duration: "24:17"
+    description: "Cliff poses a question about a song to the live chat. Tom has a run in with a bird. And the band Works on the song Variation witch"
+    thumbnail: "https://i.ytimg.com/vi/xufXjuQSagQ/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=xufXjuQSagQ&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=xufXjuQSagQ"
+
   - title: "What? We Try a New Song! Band Practice - ep44"
     date: "2025-08-06"
     duration: "27:30"
@@ -49,7 +57,7 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/9wZUvJR8NnE/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=9wZUvJR8NnE&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=9wZUvJR8NnE"
-  
+
   - title: "Band practice: Makin' Music Live! - ep42"
     date: "2025-07-23"
     duration: "30:16"
@@ -57,14 +65,7 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/Kq4UCerNUAs/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=Kq4UCerNUAs&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=Kq4UCerNUAs"
-  
-  - title: "Episode 57 - Holiday Special"
-    date: "2023-12-20"
-    duration: "1:55:22"
-    description: "Festive edition with holiday covers and special guest appearances."
-    thumbnail: "https://i.ytimg.com/vi/example4/maxresdefault.jpg"
-    youtube_url: "https://youtube.com/watch?v=example4"
-    youtube_music_url: "https://music.youtube.com/watch?v=example4"
+
   
   - title: "Episode 56 - Acoustic Session"
     date: "2023-12-13"
