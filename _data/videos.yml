@@ -1,0 +1,105 @@
+# Videos Page Configuration
+title: "VIDEOS"
+subtitle: "Music Videos & Behind the Scenes"
+youtube_channel: "https://youtube.com/@lorenzosmusic"
+live_show_url: "/live-show"
+
+# Featured Video (optional - remove this section if not using)
+featured_video:
+  title: "If I was alone (Da Dun & I Mix) (Walk Cycle Lyric Video)"
+  description: "The unique animation for this video is based on a walk cycle reel by the talented artist **Cento Lodigiani**, released under a CC-BY Creative Commons license."
+  date: "2025-08-19"
+  duration: "3:45"
+  embed_url: "https://www.youtube.com/embed/9t9hnitkx4s"
+
+# Music Videos
+music_videos:
+  - title: "Friction tango (Stage Tango Lyric Video)"
+    date: "2024-01-15"
+    duration: "3:45"
+    description: "Friction tango by Lorenzo's Music is a song from their experimental movie soundtrack project."
+    thumbnail: "https://i.ytimg.com/vi/Yjdpn5j5D3o/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=Yjdpn5j5D3o"
+    behind_scenes_url: "/videos/friction-tango-behind-scenes"
+  
+  - title: "Echo Chamber - Live Session"
+    date: "2023-12-20"
+    duration: "4:12"
+    description: "A live performance of our experimental track, showcasing the raw energy and atmospheric depth of our sound."
+    thumbnail: "https://i.ytimg.com/vi/dQw4w9WgXcQ/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+  
+  - title: "Digital Sunset - Music Video"
+    date: "2023-11-15"
+    duration: "5:23"
+    description: "Official music video for our latest experimental track with stunning visual effects."
+    thumbnail: "https://i.ytimg.com/vi/example3/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=example3"
+
+# Behind the Scenes Videos
+behind_scenes:
+  - title: "Making of Friction Tango"
+    date: "2024-01-10"
+    duration: "8:45"
+    description: "Behind the scenes look at how we created the Friction Tango lyric video."
+    thumbnail: "https://i.ytimg.com/vi/example4/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=example4"
+  
+  - title: "Studio Tour & Gear Talk"
+    date: "2023-12-05"
+    duration: "12:30"
+    description: "Take a tour of our studio and learn about the gear we use to create our unique sound."
+    thumbnail: "https://i.ytimg.com/vi/example5/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=example5"
+  
+  - title: "Songwriting Process - Digital Sunset"
+    date: "2023-11-20"
+    duration: "15:22"
+    description: "See how we developed the song Digital Sunset from initial idea to final recording."
+    thumbnail: "https://i.ytimg.com/vi/example6/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=example6"
+  
+  - title: "Recording Session - Echo Chamber"
+    date: "2023-10-15"
+    duration: "10:18"
+    description: "Watch us record Echo Chamber in the studio and see our creative process in action."
+    thumbnail: "https://i.ytimg.com/vi/example7/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=example7"
+
+# Video Categories
+categories:
+  - title: "Music Videos"
+    description: "Official music videos and lyric videos"
+    icon: "🎵"
+    video_count: "34"
+    url: "https://youtube.com/playlist?list=PLbvJrJ34c9MmrB4PBX9QocLRM8lLhndLe"
+  
+  - title: "Behind the Scenes"
+    description: "Recording sessions and making-of content"
+    icon: "🎬"
+    video_count: "23"
+    url: "https://youtube.com/playlist?list=PLbvJrJ34c9MlmKmnsLSXdppcqWBFk0ff8"
+  
+  # - title: "Live Performances"
+  #   description: "Live shows, concerts, and acoustic sessions"
+  #   icon: "🎤"
+  #   video_count: "25"
+  #   url: "https://youtube.com/playlist?list=your-live-performances-playlist"
+  
+  - title: "Live Shows"
+    description: "The Live & Unfiltered Show episodes"
+    icon: "🎥"
+    video_count: "60"
+    url: "/live-show"
+  
+#   - title: "Gear & Equipment"
+#     description: "Equipment reviews, setup tours, and gear talk"
+#     icon: "🎸"
+#     video_count: "6"
+#     url: "https://youtube.com/playlist?list=your-gear-playlist"
+#
+#   - title: "Songwriting"
+#     description: "Songwriting process, tutorials, and creative insights"
+#     icon: "🎼"
+#     video_count: "4"
+#     url: "https://youtube.com/playlist?list=your-songwriting-playlist"

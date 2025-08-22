@@ -174,4 +174,4 @@ For questions or support, please contact us through the website's contact form o
 
 ---
 
-*Built with ❤️ for Lorenzo's Music* 
+*Built by Lorenzo's Music ❤️*

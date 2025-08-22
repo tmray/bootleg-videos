@@ -1,0 +1,323 @@
+---
+layout: page
+title: Videos
+subtitle: Music Videos & Behind the Scenes
+---
+
+<div class="videos-content">
+    <!-- Hero Section -->
+    <div class="videos-hero">
+        <div class="videos-hero-content">
+            <h1 class="videos-title">{{ site.data.videos.title | default: "VIDEOS" }}</h1>
+            <p class="videos-subtitle">{{ site.data.videos.subtitle | default: "Music videos, behind the scenes, and live performances" }}</p>
+            <div class="videos-cta-buttons">
+                <a href="{{ site.data.videos.youtube_channel }}" target="_blank" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📺</span>
+                    Subscribe to YouTube
+                </a>
+                <a href="{{ site.data.videos.live_show_url }}" class="btn btn-secondary btn-large">
+                    <span class="btn-icon">🎥</span>
+                    Watch Live Shows
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Video Section -->
+    {% assign music_video_posts = site.posts | where_exp: "post", "post.tags contains 'music-video'" | sort: "date" | reverse %}
+    {% assign bts_posts = site.posts | where_exp: "post", "post.tags contains 'behind-the-scenes'" | sort: "date" | reverse %}
+    {% assign all_video_posts = music_video_posts | concat: bts_posts | sort: "date" | reverse %}
+    {% assign featured_post = all_video_posts | first %}
+    
+    {% if site.data.videos.featured_video %}
+    <div class="featured-video-section">
+        <h2 class="section-title">Featured Video</h2>
+        <div class="featured-video-container">
+            <iframe 
+                src="{{ site.data.videos.featured_video.embed_url }}"
+                title="{{ site.data.videos.featured_video.title }}"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="featured-video-info">
+            <h3 class="featured-video-title">{{ site.data.videos.featured_video.title }}</h3>
+            <p class="featured-video-description">{{ site.data.videos.featured_video.description }}</p>
+        </div>
+    </div>
+    {% elsif featured_post %}
+    <div class="featured-video-section">
+        <h2 class="section-title">Latest Video</h2>
+        <div class="featured-video-container">
+            {% if featured_post.youtube_url %}
+            {% assign video_id = featured_post.youtube_url | split: 'v=' | last | split: '&' | first %}
+            <iframe 
+                src="https://www.youtube.com/embed/{{ video_id }}"
+                title="{{ featured_post.title }}"
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+            {% endif %}
+        </div>
+        <div class="featured-video-info">
+            <h3 class="featured-video-title">{{ featured_post.title }}</h3>
+            {% if featured_post.excerpt %}
+            <p class="featured-video-description">{{ featured_post.excerpt | strip_html | truncate: 200 }}</p>
+            {% endif %}
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Music Videos Section -->
+    <div class="music-videos-section">
+        <h2 class="section-title">Music Videos</h2>
+        {% assign music_video_posts = site.posts | where_exp: "post", "post.tags contains 'music-video'" | sort: "date" | reverse %}
+        <div class="videos-grid">
+            {% if music_video_posts and music_video_posts.size > 0 %}
+            {% for post in music_video_posts limit: 3 %}
+            {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+            {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
+            {% endif %}
+            {% assign duration = post.duration | default: post.video_duration %}
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <a href="{{ post.url | relative_url }}" class="video-thumbnail-link">
+                        {% if thumb %}
+                        <img src="{{ thumb | relative_url }}" alt="{{ post.title }}" class="video-img">
+                        {% endif %}
+                        <div class="video-overlay">
+                            {% if duration %}
+                            <span class="video-duration">{{ duration }}</span>
+                            {% endif %}
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">{{ post.title }}</h3>
+                    <p class="video-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+                    {% if post.excerpt %}
+                    <p class="video-description">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+                    {% endif %}
+                    <div class="video-links">
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-small">Watch</a>
+                        {% if post.youtube_url %}
+                        <a href="{{ post.youtube_url }}" target="_blank" class="btn btn-outline btn-small">YouTube</a>
+                        {% endif %}
+                        {% if post.behind_scenes_url %}
+                        <a href="{{ post.behind_scenes_url }}" class="btn btn-outline btn-small">Behind Scenes</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            {% comment %} Fallback to data if no posts found {% endcomment %}
+            {% for video in site.data.videos.music_videos limit: 3 %}
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    {% if video.thumbnail %}
+                    <img src="{{ video.thumbnail }}" alt="{{ video.title }}" class="video-img">
+                    {% endif %}
+                    <div class="video-overlay">
+                        {% if video.duration %}
+                        <span class="video-duration">{{ video.duration }}</span>
+                        {% endif %}
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">{{ video.title }}</h3>
+                    <p class="video-date">{{ video.date }}</p>
+                    {% if video.description %}
+                    <p class="video-description">{{ video.description }}</p>
+                    {% endif %}
+                    <div class="video-links">
+                        {% if video.youtube_url %}
+                        <a href="{{ video.youtube_url }}" target="_blank" class="btn btn-primary btn-small">Watch</a>
+                        {% endif %}
+                        {% if video.behind_scenes_url %}
+                        <a href="{{ video.behind_scenes_url }}" class="btn btn-outline btn-small">Behind Scenes</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        {% if music_video_posts.size > 0 or site.data.videos.music_videos.size > 0 %}
+        <div class="section-cta">
+            <a href="/music-videos" class="btn btn-primary btn-large">
+                <span class="btn-icon">🎵</span>
+                View All Music Videos
+            </a>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Behind the Scenes Section -->
+    <div class="behind-scenes-section">
+        <h2 class="section-title">Behind the Scenes</h2>
+        {% assign bts_posts = site.posts | where_exp: "post", "post.tags contains 'behind-the-scenes'" | sort: "date" | reverse %}
+        <div class="videos-grid">
+            {% if bts_posts and bts_posts.size > 0 %}
+            {% for post in bts_posts limit: 3 %}
+            {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+            {% if thumb contains 'i.ytimg.com' and thumb contains 'default.jpg' %}
+                {% assign thumb = thumb | replace: 'default.jpg', 'hqdefault.jpg' %}
+            {% endif %}
+            {% assign duration = post.duration | default: post.video_duration %}
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <a href="{{ post.url | relative_url }}" class="video-thumbnail-link">
+                        {% if thumb %}
+                        <img src="{{ thumb | relative_url }}" alt="{{ post.title }}" class="video-img">
+                        {% endif %}
+                        <div class="video-overlay">
+                            {% if duration %}
+                            <span class="video-duration">{{ duration }}</span>
+                            {% endif %}
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">{{ post.title }}</h3>
+                    <p class="video-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+                    {% if post.excerpt %}
+                    <p class="video-description">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+                    {% endif %}
+                    <div class="video-links">
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-small">Watch</a>
+                        {% if post.youtube_url %}
+                        <a href="{{ post.youtube_url }}" target="_blank" class="btn btn-outline btn-small">YouTube</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            {% comment %} Fallback to data if no posts found {% endcomment %}
+            {% for video in site.data.videos.behind_scenes limit: 3 %}
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    {% if video.thumbnail %}
+                    <img src="{{ video.thumbnail }}" alt="{{ video.title }}" class="video-img">
+                    {% endif %}
+                    <div class="video-overlay">
+                        {% if video.duration %}
+                        <span class="video-duration">{{ video.duration }}</span>
+                        {% endif %}
+                        <div class="play-button">▶</div>
+                    </div>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">{{ video.title }}</h3>
+                    <p class="video-date">{{ video.date }}</p>
+                    {% if video.description %}
+                    <p class="video-description">{{ video.description }}</p>
+                    {% endif %}
+                    <div class="video-links">
+                        {% if video.youtube_url %}
+                        <a href="{{ video.youtube_url }}" target="_blank" class="btn btn-primary btn-small">Watch</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </div>
+        {% if bts_posts.size > 0 or site.data.videos.behind_scenes.size > 0 %}
+        <div class="section-cta">
+            <a href="/behind-the-scenes" class="btn btn-primary btn-large">
+                <span class="btn-icon">🎬</span>
+                View All Behind the Scenes
+            </a>
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Live Shows Section -->
+    <div class="live-shows-section">
+        <h2 class="section-title">Live Shows</h2>
+        <div class="live-shows-content">
+            <div class="live-shows-text">
+                <h3>Lorenzo's Music The Live & Unfiltered Show</h3>
+                <p>Every Wednesday at 9 PM Central, we go live from our studio! Watch us rehearse, write new songs, and interact with viewers in real-time.</p>
+                <ul class="live-shows-features">
+                    <li>🎵 Live band practice and songwriting</li>
+                    <li>💬 Interactive chat with viewers</li>
+                    <li>🎸 Behind-the-scenes studio action</li>
+                    <li>🎼 Song requests and Q&A sessions</li>
+                </ul>
+            </div>
+            <div class="live-shows-cta">
+                <a href="{{ site.data.videos.live_show_url }}" class="btn btn-primary btn-large">
+                    <span class="btn-icon">🎥</span>
+                    Watch Live Shows
+                </a>
+                <a href="{{ site.data.videos.youtube_channel }}" target="_blank" class="btn btn-outline">
+                    <span class="btn-icon">🔔</span>
+                    Subscribe for Notifications
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- YouTube Subscribe Section -->
+    <div class="youtube-subscribe-section">
+        <h2 class="section-title">Subscribe to Our Channel</h2>
+        <div class="subscribe-content">
+            <div class="subscribe-text">
+                <h3>Never Miss a Video</h3>
+                <p>Subscribe to our YouTube channel to get notified about new music videos, behind-the-scenes content, and live shows!</p>
+                <div class="subscribe-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎵</span>
+                        <span class="benefit-text">New music videos first</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎬</span>
+                        <span class="benefit-text">Behind-the-scenes content</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎥</span>
+                        <span class="benefit-text">Live show notifications</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💬</span>
+                        <span class="benefit-text">Community updates</span>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe-cta">
+                <a href="{{ site.data.videos.youtube_channel }}" target="_blank" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📺</span>
+                    Subscribe to YouTube
+                </a>
+                <p class="subscribe-note">Click the notification bell to get reminded about new videos!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Video Categories -->
+    <div class="video-categories-section">
+        <h2 class="section-title">Browse by Category</h2>
+        <div class="categories-grid">
+            {% for category in site.data.videos.categories %}
+            <a href="{{ category.url }}" class="category-card">
+                <div class="category-icon">{{ category.icon }}</div>
+                <div class="category-content">
+                    <h3 class="category-title">{{ category.title }}</h3>
+                    <p class="category-description">{{ category.description }}</p>
+                    <span class="category-count">{{ category.video_count }} videos</span>
+                </div>
+                <span class="category-arrow">→</span>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
