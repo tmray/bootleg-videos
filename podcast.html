@@ -33,12 +33,16 @@ subtitle: Lorenzo's Music Podcast
     <div class="episodes-section">
         <h2 class="section-title">Recent Episodes</h2>
         <div class="episodes-grid">
-            {% assign podcast_posts = site.posts | where: "categories", "podcast" | sort: "date" | reverse %}
+            {% assign podcast_posts = site.posts | where_exp: "post", "post.tags contains 'lorenzos-music-podcast'" | sort: "date" | reverse %}
             {% for post in podcast_posts limit: 10 %}
+            {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+            {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
+            {% endif %}
             <div class="episode-card">
-                {% if post.episode_image %}
+                {% if thumb %}
                 <div class="episode-image">
-                    <img src="{{ post.episode_image }}" alt="{{ post.title }}" class="episode-img">
+                    <img src="{{ thumb }}" alt="{{ post.title }}" class="episode-img">
                 </div>
                 {% elsif post.image %}
                 <div class="episode-image">

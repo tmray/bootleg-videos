@@ -3,12 +3,12 @@ layout: post
 title: "Joe Cannon - Resurrectionists - From Punk Roots to Chamber Americana"
 date: 2025-08-15
 categories: [podcast]
-tags: [interview, Joe Cannon, musician]
+tags: [interview, Joe Cannon, musician, lorenzos-music-podcast]
 author: "Tom Ray"
 excerpt: "I talk with Joe Cannon, the guitarist and vocalist from the Milwaukee-based band Resurrectionists. Joe talks about how academia brought him to Milwaukee, where he got involved in the music scene."
 guest: "Joe Cannon"
 episode_number: "15"
-episode_image: "https://i.ytimg.com/vi/FgWR3eB3Y_w/maxresdefault.jpg"
+image: "https://i.ytimg.com/vi/FgWR3eB3Y_w/maxresdefault.jpg"
 audio_url: "https://creators.spotify.com/pod/profile/lorenzosmusic/episodes/Joe-Cannon-of-Resurrectionists---From-Punk-Roots-to-Chamber-Americana-e36pt87"
 transcript_url: "/podcast/episode-resurrectionists-transcript"
 ---
