@@ -1,0 +1,110 @@
+---
+layout: page
+title: Behind the Scenes
+subtitle: All Behind the Scenes Content
+---
+
+<div class="videos-content">
+    <!-- Hero Section -->
+    <div class="videos-hero">
+        <div class="videos-hero-content">
+            <h1 class="videos-title">BEHIND THE SCENES</h1>
+            <p class="videos-subtitle">Studio tours, recording sessions, and making-of content</p>
+            <div class="videos-cta-buttons">
+                <a href="{{ site.data.videos.youtube_channel }}" target="_blank" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📺</span>
+                    Subscribe to YouTube
+                </a>
+                <a href="/videos" class="btn btn-secondary btn-large">
+                    <span class="btn-icon">🎬</span>
+                    Back to Videos
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Behind the Scenes Grid -->
+    <div class="behind-scenes-section">
+        <h2 class="section-title">All Behind the Scenes</h2>
+        {% assign bts_posts = site.posts | where_exp: "post", "post.tags contains 'behind-the-scenes'" | sort: "date" | reverse %}
+        <div class="videos-grid">
+            {% if bts_posts and bts_posts.size > 0 %}
+            {% for post in bts_posts %}
+            {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+            {% if thumb contains 'i.ytimg.com' and thumb contains 'default.jpg' %}
+                {% assign thumb = thumb | replace: 'default.jpg', 'hqdefault.jpg' %}
+            {% endif %}
+            {% assign duration = post.duration | default: post.video_duration %}
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <a href="{{ post.url | relative_url }}" class="video-thumbnail-link">
+                        {% if thumb %}
+                        <img src="{{ thumb | relative_url }}" alt="{{ post.title }}" class="video-img">
+                        {% endif %}
+                        <div class="video-overlay">
+                            {% if duration %}
+                            <span class="video-duration">{{ duration }}</span>
+                            {% endif %}
+                            <div class="play-button">▶</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="video-content">
+                    <h3 class="video-title">{{ post.title }}</h3>
+                    <p class="video-date">{{ post.date | date: "%b %-d, %Y" }}</p>
+                    {% if post.excerpt %}
+                    <p class="video-description">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+                    {% endif %}
+                    <div class="video-links">
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary btn-small">Watch</a>
+                        {% if post.youtube_url %}
+                        <a href="{{ post.youtube_url }}" target="_blank" class="btn btn-outline btn-small">YouTube</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <div class="no-videos">
+                <p>No behind the scenes content found. Check back soon for new content!</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- YouTube Subscribe Section -->
+    <div class="youtube-subscribe-section">
+        <h2 class="section-title">Subscribe to Our Channel</h2>
+        <div class="subscribe-content">
+            <div class="subscribe-text">
+                <h3>Never Miss Behind the Scenes Content</h3>
+                <p>Subscribe to our YouTube channel to get notified about new behind-the-scenes content and studio updates!</p>
+                <div class="subscribe-benefits">
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎬</span>
+                        <span class="benefit-text">Behind-the-scenes content</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎵</span>
+                        <span class="benefit-text">New music videos first</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">🎥</span>
+                        <span class="benefit-text">Live show notifications</span>
+                    </div>
+                    <div class="benefit-item">
+                        <span class="benefit-icon">💬</span>
+                        <span class="benefit-text">Community updates</span>
+                    </div>
+                </div>
+            </div>
+            <div class="subscribe-cta">
+                <a href="{{ site.data.videos.youtube_channel }}" target="_blank" class="btn btn-primary btn-large">
+                    <span class="btn-icon">📺</span>
+                    Subscribe to YouTube
+                </a>
+                <p class="subscribe-note">Click the notification bell to get reminded about new videos!</p>
+            </div>
+        </div>
+    </div>
+</div>

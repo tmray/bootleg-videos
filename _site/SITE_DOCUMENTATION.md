@@ -5,14 +5,15 @@ This documentation covers all the features and customization options available f
 ## Table of Contents
 1. [Hero Section Customization](#hero-section-customization)
 2. [Blog Post Images](#blog-post-images)
-3. [Contact Form Options](#contact-form-options)
-4. [Social Media Icons](#social-media-icons)
-5. [Site Configuration](#site-configuration)
-6. [VHS Aesthetic Features](#vhs-aesthetic-features)
-7. [File Structure](#file-structure)
-8. [Development Commands](#development-commands)
-9. [Troubleshooting](#troubleshooting)
-10. [Maintenance](#maintenance)
+3. [Video Posts & Embeds](#video-posts--embeds)
+4. [Contact Form Options](#contact-form-options)
+5. [Social Media Icons](#social-media-icons)
+6. [Site Configuration](#site-configuration)
+7. [VHS Aesthetic Features](#vhs-aesthetic-features)
+8. [File Structure](#file-structure)
+9. [Development Commands](#development-commands)
+10. [Troubleshooting](#troubleshooting)
+11. [Maintenance](#maintenance)
 
 ## Hero Section Customization
 
@@ -75,6 +76,116 @@ You can add images to blog posts with three different size options:
 - Jagged borders using CSS clip-path
 - Hover effects with scale and glow
 - Responsive sizing for mobile devices
+
+## Video Posts & Embeds
+
+The site includes a comprehensive video system for music videos and behind-the-scenes content.
+
+### Video Post YAML Front Matter
+
+**Required fields for video posts:**
+
+```yaml
+---
+layout: post
+title: "Your Video Title"
+date: YYYY-MM-DD
+categories: [videos]  # or any category you prefer
+tags: [music-video]   # or [behind-the-scenes]
+author: Lorenzo's Music
+excerpt: "Brief description of the video"
+thumbnail: https://i.ytimg.com/vi/YOUR_VIDEO_ID/hqdefault.jpg
+duration: "MM:SS"
+youtube_url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
+---
+```
+
+**Optional fields:**
+```yaml
+behind_scenes_url: "/path/to/related-post"  # Link to related behind-the-scenes post
+```
+
+### Video Tags
+
+Use these specific tags to categorize your video posts:
+
+- **`music-video`**: Appears in Music Videos section
+- **`behind-the-scenes`**: Appears in Behind the Scenes section
+
+### Thumbnail Format
+
+**YouTube Thumbnails:**
+- Use `hqdefault.jpg` for high quality: `https://i.ytimg.com/vi/YOUR_VIDEO_ID/hqdefault.jpg`
+- The system automatically converts `default.jpg` to `hqdefault.jpg` for better quality
+
+**Other Images:**
+- Use relative paths: `/assets/images/your-thumbnail.jpg`
+- Or absolute URLs for external images
+
+### Video Embed Include
+
+Use the video embed include to add videos directly to your posts:
+
+**Basic Usage:**
+```liquid
+{% include video-embed.html video_id="YOUR_VIDEO_ID" title="Video Title" %}
+```
+
+**With Caption:**
+```liquid
+{% include video-embed.html video_id="YOUR_VIDEO_ID" title="Video Title" caption="Optional caption text" %}
+```
+
+**Custom Size:**
+```liquid
+{% include video-embed.html video_id="YOUR_VIDEO_ID" title="Video Title" width="100%" %}
+```
+
+### Video Embed Features
+
+- **VHS Aesthetic**: Clipped corners, static overlay, sepia filters
+- **Responsive Design**: 16:9 aspect ratio, scales on all devices
+- **Hover Effects**: Brightens on hover
+- **Centered Captions**: Optional captions are center-aligned
+- **YouTube Integration**: Automatically converts to embed format
+
+### Video Pages
+
+The site includes dedicated video pages:
+
+- **`/videos`**: Main videos page with featured video and recent content
+- **`/music-videos`**: All music videos (tagged with `music-video`)
+- **`/behind-the-scenes`**: All behind-the-scenes content (tagged with `behind-the-scenes`)
+
+### Example Video Post
+
+```markdown
+---
+layout: post
+title: "Friction Tango - Official Music Video"
+date: 2024-01-20
+categories: [videos]
+tags: [music-video, experimental, lofi]
+author: Lorenzo's Music
+excerpt: "The official music video for our experimental track 'Friction Tango' from our movie soundtrack project."
+thumbnail: https://i.ytimg.com/vi/Yjdpn5j5D3o/hqdefault.jpg
+duration: "3:45"
+youtube_url: "https://www.youtube.com/watch?v=Yjdpn5j5D3o"
+---
+
+{% include video-embed.html video_id="Yjdpn5j5D3o" title="Friction Tango - Official Music Video" caption="From our album Friction" %}
+
+# Friction Tango - Official Music Video
+
+Your post content here...
+```
+
+### Video Organization
+
+- **Main Videos Page**: Shows featured video + 3 most recent from each category
+- **Dedicated Pages**: Show all posts from specific categories
+- **Automatic Featured Video**: Uses most recent video if no manual featured video is set
+- **Smart Thumbnails**: Automatically converts YouTube thumbnails to high quality
 
 ## Contact Form Options
 
@@ -200,6 +311,13 @@ url: "https://lorenzosmusic.com"
 ```
 Lorenzo-test-pattern design/
 ├── _config.yml              # Site configuration
+├── _data/                   # Data files
+│   ├── videos.yml          # Video page configuration
+│   ├── podcast.yml         # Podcast configuration
+│   ├── live_show.yml       # Live show configuration
+│   └── links.yml           # Links page configuration
+├── _includes/              # Reusable components
+│   └── video-embed.html    # Video embed include
 ├── _layouts/
 │   ├── default.html         # Main layout template
 │   └── post.html           # Blog post layout
@@ -213,6 +331,12 @@ Lorenzo-test-pattern design/
 ├── index.html              # Homepage
 ├── about.html              # About page
 ├── music.html              # Music page
+├── videos.html             # Main videos page
+├── music-videos.html       # All music videos page
+├── behind-the-scenes.html  # All behind the scenes page
+├── live-show.html          # Live show page
+├── podcast.html            # Podcast page
+├── links.html              # Links page
 ├── blog.html               # Blog listing page
 ├── contact.html            # Contact page
 ├── Gemfile                 # Ruby dependencies

@@ -1,0 +1,27 @@
+{% comment %}
+Video Embed Include
+Usage: {% include video-embed.html video_id="YOUR_VIDEO_ID" title="Video Title" %}
+{% endcomment %}
+
+{% assign video_id = include.video_id %}
+{% assign title = include.title | default: "Video" %}
+{% assign width = include.width | default: "100%" %}
+
+<div class="post-video-embed">
+    <div class="video-embed-container">
+        <iframe 
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/{{ video_id }}"
+            title="{{ title }}"
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    {% if include.caption %}
+    <div class="video-caption">
+        <p>{{ include.caption }}</p>
+    </div>
+    {% endif %}
+</div>
