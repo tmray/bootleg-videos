@@ -4047,3 +4047,249 @@ a:hover {
         padding-left: 1rem;
     }
 } 
+
+/* Call-to-Action Box Styles */
+.cta-box {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: var(--dark-static-black);
+    border: 2px solid var(--distorted-purple);
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+    box-shadow: 0 4px 20px rgba(153, 51, 255, 0.3);
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(153, 51, 255, 0.1) 50%, transparent 70%);
+    animation: cta-shimmer 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes cta-shimmer {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(100%); }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.cta-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--flickering-cyan);
+    text-shadow: 0 0 10px var(--flickering-cyan);
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--off-white-beige);
+    line-height: 1.6;
+}
+
+/* Mailchimp Signup Styles */
+.mailchimp-signup {
+    background: linear-gradient(135deg, var(--dark-static-black) 0%, #2a1a3a 100%);
+    border-color: var(--flickering-cyan);
+}
+
+.mailchimp-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.email-input {
+    flex: 1;
+    min-width: 200px;
+    padding: 0.75rem 1rem;
+    background: var(--dark-static-black);
+    border: 2px solid var(--flickering-cyan);
+    border-radius: 4px;
+    color: var(--off-white-beige);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.email-input:focus {
+    outline: none;
+    border-color: var(--distorted-purple);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+.email-input::placeholder {
+    color: var(--washed-out-grey);
+}
+
+.subscribe-button {
+    padding: 0.75rem 1.5rem;
+    background: var(--flickering-cyan);
+    color: var(--dark-static-black);
+    border: none;
+    border-radius: 4px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.subscribe-button:hover {
+    background: var(--distorted-purple);
+    color: var(--off-white-beige);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+}
+
+/* Custom CTA Styles */
+.custom-cta.cta-primary {
+    background: linear-gradient(135deg, var(--dark-static-black) 0%, #3a1a2a 100%);
+    border-color: var(--distorted-purple);
+}
+
+.custom-cta.cta-secondary {
+    background: linear-gradient(135deg, var(--dark-static-black) 0%, #1a3a2a 100%);
+    border-color: var(--flickering-cyan);
+}
+
+.custom-cta.cta-outline {
+    background: transparent;
+    border-color: var(--off-white-beige);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--distorted-purple);
+    color: var(--off-white-beige);
+    text-decoration: none;
+    border-radius: 4px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    background: var(--flickering-cyan);
+    color: var(--dark-static-black);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(153, 51, 255, 0.4);
+}
+
+.custom-cta.cta-secondary .cta-button {
+    background: var(--flickering-cyan);
+    color: var(--dark-static-black);
+}
+
+.custom-cta.cta-secondary .cta-button:hover {
+    background: var(--distorted-purple);
+    color: var(--off-white-beige);
+}
+
+.custom-cta.cta-outline .cta-button {
+    background: transparent;
+    color: var(--off-white-beige);
+    border-color: var(--off-white-beige);
+}
+
+.custom-cta.cta-outline .cta-button:hover {
+    background: var(--off-white-beige);
+    color: var(--dark-static-black);
+}
+
+/* CTA with Background Image */
+.cta-with-bg {
+    position: relative;
+    color: var(--off-white-beige);
+}
+
+.cta-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.cta-with-bg .cta-content {
+    position: relative;
+    z-index: 3;
+}
+
+.cta-with-bg .cta-title {
+    color: var(--off-white-beige);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile Responsive CTA */
+@media (max-width: 768px) {
+    .cta-box {
+        margin: 2rem 0;
+        padding: 1.5rem;
+    }
+    
+    .cta-title {
+        font-size: 1.2rem;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+    }
+    
+    .form-group {
+        flex-direction: column;
+    }
+    
+    .email-input {
+        min-width: auto;
+        width: 100%;
+    }
+    
+    .subscribe-button {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .cta-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-box {
+        padding: 1rem;
+    }
+    
+    .cta-title {
+        font-size: 1rem;
+    }
+    
+    .cta-description {
+        font-size: 0.9rem;
+    }
+}

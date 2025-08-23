@@ -1,0 +1,48 @@
+{% comment %}
+  Mailchimp Email Signup CTA Include
+  
+  Usage:
+  {% include mailchimp-signup.html %}
+  
+  Optional parameters:
+  - title: Custom title (default: "Stay Updated")
+  - description: Custom description (default: "Get notified about new music, videos, and updates")
+  - button_text: Custom button text (default: "Subscribe")
+  - placeholder: Custom placeholder text (default: "Enter your email")
+  - form_action: Custom Mailchimp form action URL
+  - form_id: Custom form ID for styling
+{% endcomment %}
+
+{% assign title = include.title | default: "Stay Updated" %}
+{% assign description = include.description | default: "Get notified about new music, videos, and updates" %}
+{% assign button_text = include.button_text | default: "Subscribe" %}
+{% assign placeholder = include.placeholder | default: "Enter your email" %}
+{% assign form_action = include.form_action | default: "https://your-mailchimp-form-url" %}
+{% assign form_id = include.form_id | default: "mailchimp-signup" %}
+
+<div class="cta-box mailchimp-signup">
+  <div class="cta-content">
+    <h3 class="cta-title">{{ title }}</h3>
+    <p class="cta-description">{{ description }}</p>
+    
+    <form class="mailchimp-form" action="{{ form_action }}" method="post" id="{{ form_id }}" name="mc-embedded-subscribe-form" target="_blank" novalidate>
+      <div class="form-group">
+        <input type="email" 
+               name="EMAIL" 
+               class="email-input" 
+               placeholder="{{ placeholder }}" 
+               required>
+        <button type="submit" 
+                name="subscribe" 
+                class="subscribe-button">
+          {{ button_text }}
+        </button>
+      </div>
+      
+      <!-- Real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="b_xxxxxxxxxxxxxxxxxxxxxxxxx_xxxxxxxxxx" tabindex="-1" value="">
+      </div>
+    </form>
+  </div>
+</div>

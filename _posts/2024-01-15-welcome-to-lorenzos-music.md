@@ -3,6 +3,7 @@ layout: post
 title: "Welcome to Lorenzo's Music"
 date: 2024-01-15
 author: Lorenzo
+categories: blog
 tags: [welcome, introduction, music]
 excerpt: "Welcome to our new website! We're excited to share our experimental lofi rock journey with you."
 ---

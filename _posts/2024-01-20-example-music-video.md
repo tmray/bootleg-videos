@@ -11,7 +11,7 @@ duration: "3:45"
 youtube_url: "https://www.youtube.com/watch?v=Yjdpn5j5D3o"
 ---
 
-{% include video-embed.html video_id="Yjdpn5j5D3o" title="Friction Tango - Official Music Video" caption="From our album Friction" %}
+{% include video-embed.html video_id="Yjdpn5j5D3o" title="Friction Tango - Official Music Video" caption="From our album Friction" width="100%" %}
 # Friction Tango - Official Music Video
 
 Friction tango by Lorenzo's Music is a song from our experimental movie soundtrack project. The song emotes an old 78 rpm tango recording, creating a nostalgic yet modern soundscape.

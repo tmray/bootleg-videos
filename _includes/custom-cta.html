@@ -1,0 +1,40 @@
+{% comment %}
+  Custom Call-to-Action CTA Include
+  
+  Usage:
+  {% include custom-cta.html title="Your Title" description="Your description" button_text="Click Here" button_url="/your-link" %}
+  
+  Required parameters:
+  - title: The headline text
+  - description: The description text
+  - button_text: The button text
+  - button_url: The button link URL
+  
+  Optional parameters:
+  - style: CTA style variant (default: "primary", options: "primary", "secondary", "outline")
+  - background_image: Optional background image URL
+  - text_color: Custom text color (hex code)
+  - button_color: Custom button color (hex code)
+{% endcomment %}
+
+{% assign style = include.style | default: "primary" %}
+{% assign background_image = include.background_image %}
+{% assign text_color = include.text_color %}
+{% assign button_color = include.button_color %}
+
+<div class="cta-box custom-cta cta-{{ style }}{% if background_image %} cta-with-bg{% endif %}">
+  {% if background_image %}
+  <div class="cta-background" style="background-image: url('{{ background_image }}');"></div>
+  {% endif %}
+  
+  <div class="cta-content"{% if text_color %} style="color: {{ text_color }};"{% endif %}>
+    <h3 class="cta-title">{{ include.title }}</h3>
+    <p class="cta-description">{{ include.description }}</p>
+    
+    <a href="{{ include.button_url }}" 
+       class="cta-button{% if button_color %} custom-button-color{% endif %}"
+       {% if button_color %}style="background-color: {{ button_color }};"{% endif %}>
+      {{ include.button_text }}
+    </a>
+  </div>
+</div>
