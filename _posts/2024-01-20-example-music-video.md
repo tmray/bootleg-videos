@@ -2,7 +2,7 @@
 layout: post
 title: "Friction Tango - Official Music Video"
 date: 2024-01-20
-categories: [videos]
+categories: [examples]
 tags: [music-video, experimental, lofi]
 author: Lorenzo's Music
 excerpt: "The official music video for our experimental track 'Friction Tango' from our movie soundtrack project."

@@ -2,7 +2,7 @@
 layout: post
 title: "Basspistol - Music, Promotion and Navigating the Fediverse"
 date: 2025-08-01
-categories: [podcast]
+categories: [examples]
 author: "Tom Ray"
 excerpt: "In this episode of Lorenzo's Music Podcast, I sit down with Setto, a multifaceted musician and entrepreneur who runs the innovative platform Basspistol."
 guest: "Setto"

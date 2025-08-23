@@ -3,6 +3,7 @@ layout: post
 title: "Lorenzo's Music Podcast Video Post"
 date: 2025-08-01
 author: Tom Ray
+categories: [examples]
 tags: [podcast, video]
 excerpt: "Heyo! New podcast video"
 ---

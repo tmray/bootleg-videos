@@ -2,7 +2,7 @@
 layout: post
 title: "Andre Michelle - Innovating Music Creation with OpenDAW"
 date: 2025-07-18
-categories: [podcast]
+categories: [examples]
 tags: [interview, Andre Michelle, musician, technology, OpenDAW, lorenzos-music-podcast]
 author: "Tom Ray"
 excerpt: "In this episode of Lorenzo's Music Podcast, I meet Andre Michelle, an innovative creator in the music technology space, to discuss his latest project, OpenDaw."
