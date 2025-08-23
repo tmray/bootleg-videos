@@ -6,14 +6,15 @@ This documentation covers all the features and customization options available f
 1. [Hero Section Customization](#hero-section-customization)
 2. [Blog Post Images](#blog-post-images)
 3. [Video Posts & Embeds](#video-posts--embeds)
-4. [Contact Form Options](#contact-form-options)
-5. [Social Media Icons](#social-media-icons)
-6. [Site Configuration](#site-configuration)
-7. [VHS Aesthetic Features](#vhs-aesthetic-features)
-8. [File Structure](#file-structure)
-9. [Development Commands](#development-commands)
-10. [Troubleshooting](#troubleshooting)
-11. [Maintenance](#maintenance)
+4. [Call-to-Action Includes](#call-to-action-includes)
+5. [Contact Form Options](#contact-form-options)
+6. [Social Media Icons](#social-media-icons)
+7. [Site Configuration](#site-configuration)
+8. [VHS Aesthetic Features](#vhs-aesthetic-features)
+9. [File Structure](#file-structure)
+10. [Development Commands](#development-commands)
+11. [Troubleshooting](#troubleshooting)
+12. [Maintenance](#maintenance)
 
 ## Hero Section Customization
 
@@ -187,6 +188,101 @@ Your post content here...
 - **Automatic Featured Video**: Uses most recent video if no manual featured video is set
 - **Smart Thumbnails**: Automatically converts YouTube thumbnails to high quality
 
+## Call-to-Action Includes
+
+The site includes two reusable call-to-action components for posts and pages.
+
+### Mailchimp Email Signup CTA
+
+**Basic Usage:**
+```liquid
+{% include mailchimp-signup.html %}
+```
+
+**With Customization:**
+```liquid
+{% include mailchimp-signup.html 
+   title="Join Our Mailing List" 
+   description="Get exclusive access to new music and updates" 
+   button_text="Sign Me Up" 
+   placeholder="Your email address" %}
+```
+
+**Available Parameters:**
+- `title`: Custom title (default: "Stay Updated")
+- `description`: Custom description
+- `button_text`: Custom button text (default: "Subscribe")
+- `placeholder`: Custom placeholder text
+- `form_action`: Custom Mailchimp form action URL
+- `form_id`: Custom form ID for styling
+
+### Custom CTA Box
+
+**Basic Usage:**
+```liquid
+{% include custom-cta.html 
+   title="Your Title" 
+   description="Your description" 
+   button_text="Click Here" 
+   button_url="/your-link" %}
+```
+
+**With Style Options:**
+```liquid
+{% include custom-cta.html 
+   title="Your Title" 
+   description="Your description" 
+   button_text="Click Here" 
+   button_url="/your-link" 
+   style="secondary" %}
+```
+
+**With Background Image:**
+```liquid
+{% include custom-cta.html 
+   title="Your Title" 
+   description="Your description" 
+   button_text="Click Here" 
+   button_url="/your-link" 
+   background_image="/path/to/image.jpg" %}
+```
+
+**Available Parameters:**
+- `title`: The headline text (required)
+- `description`: The description text (required)
+- `button_text`: The button text (required)
+- `button_url`: The button link URL (required)
+- `style`: CTA style variant (`primary`, `secondary`, `outline`)
+- `background_image`: Optional background image URL
+- `text_color`: Custom text color (hex code)
+- `button_color`: Custom button color (hex code)
+
+### CTA Features
+
+- **VHS Aesthetic**: Clipped corners, shimmer animation, VHS color scheme
+- **Responsive Design**: Adapts to all screen sizes
+- **Multiple Styles**: Primary (purple), secondary (cyan), outline (minimal)
+- **Background Images**: Optional background images with overlay
+- **Custom Colors**: Advanced customization options
+- **Hover Effects**: Interactive buttons with animations
+
+### Setup for Mailchimp
+
+1. **Get your form action URL:**
+   - Create a signup form in Mailchimp
+   - Copy the form action URL
+   - Update `_includes/mailchimp-signup.html`
+
+2. **Example Mailchimp form action:**
+   ```
+   https://yourdomain.us1.list-manage.com/subscribe/post?u=xxxxxxxxxxxxxxxxxxxxxxxxx&id=xxxxxxxxxx
+   ```
+
+3. **Test the integration:**
+   - Verify form submission works
+   - Check subscriber list updates
+   - Test redirect behavior
+
 ## Contact Form Options
 
 The contact form currently has placeholder functionality. Here are your options for making it functional:
@@ -317,7 +413,9 @@ Lorenzo-test-pattern design/
 │   ├── live_show.yml       # Live show configuration
 │   └── links.yml           # Links page configuration
 ├── _includes/              # Reusable components
-│   └── video-embed.html    # Video embed include
+│   ├── video-embed.html    # Video embed include
+│   ├── mailchimp-signup.html # Mailchimp email signup CTA
+│   └── custom-cta.html     # Custom call-to-action CTA
 ├── _layouts/
 │   ├── default.html         # Main layout template
 │   └── post.html           # Blog post layout
