@@ -1176,6 +1176,174 @@ a:hover {
     color: var(--washed-out-grey);
 }
 
+/* Tag Pages */
+.tag-page {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tag-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid var(--washed-out-grey);
+}
+
+.tag-header h1 {
+    color: var(--flickering-cyan);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+    margin-bottom: 0.5rem;
+}
+
+.tag-header p {
+    color: var(--washed-out-grey);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1.1rem;
+}
+
+.tag-posts {
+    margin-top: 2rem;
+}
+
+.tag-post {
+    background-color: var(--vhs-dark-gray);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.tag-post:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 255, 255, 0.5);
+    border-color: var(--flickering-cyan);
+}
+
+.tag-post .post-header h2 {
+    margin-bottom: 0.5rem;
+}
+
+.tag-post .post-header h2 a {
+    color: var(--flickering-cyan);
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.tag-post .post-meta {
+    color: var(--washed-out-grey);
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.tag-post .post-excerpt {
+    color: var(--off-white-beige);
+    margin-bottom: 1.5rem;
+}
+
+.tag-post .post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.tag-post .read-more {
+    color: var(--flickering-cyan);
+    font-weight: bold;
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+}
+
+.tag-post .post-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tag-post .tag {
+    background-color: var(--vhs-dark-gray);
+    color: var(--off-white-beige);
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--washed-out-grey);
+    border-radius: 0;
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.tag-post .tag:hover {
+    background-color: var(--distorted-purple);
+    color: var(--off-white-beige);
+    border-color: var(--distorted-purple);
+}
+
+/* Tags Index Page */
+.tags-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tags-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--off-white-beige);
+}
+
+.tags-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tag-item {
+    background-color: var(--vhs-dark-gray);
+    border: 3px solid var(--washed-out-grey);
+    border-radius: 0;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+}
+
+.tag-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 255, 255, 0.5);
+    border-color: var(--flickering-cyan);
+}
+
+.tag-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tag-name {
+    color: var(--flickering-cyan);
+    font-weight: bold;
+    text-shadow: 1px 1px 0px var(--distorted-purple);
+    font-size: 1.1rem;
+}
+
+.tag-count {
+    color: var(--washed-out-grey);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    background-color: var(--vhs-dark-gray);
+    padding: 0.25rem 0.75rem;
+    border: 1px solid var(--washed-out-grey);
+    border-radius: 0;
+}
+
+.no-tags {
+    text-align: center;
+    padding: 3rem;
+    color: var(--washed-out-grey);
+}
+
 /* Contact Page */
 .contact-content {
     max-width: 800px;

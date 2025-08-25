@@ -1,0 +1,32 @@
+---
+layout: page
+title: Tags
+subtitle: Browse posts by tag
+---
+
+<div class="tags-content">
+    <div class="tags-intro">
+        <p>Browse all posts by their tags. Click on any tag to see all posts with that tag.</p>
+    </div>
+
+    <div class="tags-list">
+        {% assign tags = site.tags | sort %}
+        {% for tag in tags %}
+        {% assign tag_name = tag[0] %}
+        {% assign posts = tag[1] %}
+        <div class="tag-item">
+            <a href="{{ '/tags/' | append: tag_name | downcase | replace: ' ', '-' | relative_url }}" class="tag-link">
+                <span class="tag-name">{{ tag_name }}</span>
+                <span class="tag-count">{{ posts.size }} post{% if posts.size != 1 %}s{% endif %}</span>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% if site.tags.size == 0 %}
+    <div class="no-tags">
+        <h3>No tags yet</h3>
+        <p>No posts have been tagged yet. Check back soon!</p>
+    </div>
+    {% endif %}
+</div>
