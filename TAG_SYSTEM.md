@@ -98,3 +98,4 @@ Potential improvements that could be added:
 - Tag search functionality
 - Tag categories or hierarchies
 - Tag-based RSS feeds
+

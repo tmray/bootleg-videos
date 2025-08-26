@@ -1,0 +1,39 @@
+---
+layout: default
+title: "404 - Page Not Found"
+permalink: /404.html
+---
+
+<div class="error-page">
+    <div class="container">
+        <div class="error-content">
+            <div class="error-header">
+                <h1 class="error-title">404</h1>
+                <h2 class="error-subtitle">PAGE NOT FOUND</h2>
+            </div>
+            
+            <div class="error-message">
+                <p>The page you're looking for doesn't exist or has been moved.</p>
+                <p>It might have been lost in the analog noise of the digital void.</p>
+            </div>
+            
+            <div class="error-actions">
+                <a href="{{ '/' | relative_url }}" class="btn btn-primary">Return Home</a>
+                <a href="{{ '/blog' | relative_url }}" class="btn btn-secondary">Browse Blog</a>
+                <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Listen to Music</a>
+            </div>
+            
+            <div class="error-suggestions">
+                <h3>You might be looking for:</h3>
+                <ul class="suggestion-links">
+                    <li><a href="{{ '/about' | relative_url }}">About Us</a></li>
+                    <li><a href="{{ '/music' | relative_url }}">Music</a></li>
+                    <li><a href="{{ '/videos' | relative_url }}">Videos</a></li>
+                    <li><a href="{{ '/podcast' | relative_url }}">Podcast</a></li>
+                    <li><a href="{{ '/blog' | relative_url }}">Blog</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
