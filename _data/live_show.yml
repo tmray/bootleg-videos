@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Take it song! Live Band Practice Podcast - ep46"
+    date: "2025-08-20"
+    duration: "29:40"
+    description: "Tom gets frazzled during a song and Bryan attempts to learn &amp;Take it when it comes&amp;, a song he may have never have played before!"
+    thumbnail: "https://i.ytimg.com/vi/9lgteiIAZ2s/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=9lgteiIAZ2s&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=9lgteiIAZ2s"
+
   - title: "Watch out for birds! Live Band Practice - ep45"
     date: "2025-08-13"
     duration: "24:17"
@@ -65,15 +73,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/Kq4UCerNUAs/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=Kq4UCerNUAs&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=Kq4UCerNUAs"
-
-  
-  - title: "Episode 56 - Acoustic Session"
-    date: "2023-12-13"
-    duration: "1:20:15"
-    description: "Stripped-down acoustic versions of our songs and intimate Q&A."
-    thumbnail: "https://i.ytimg.com/vi/example5/maxresdefault.jpg"
-    youtube_url: "https://youtube.com/watch?v=example5"
-    youtube_music_url: "https://music.youtube.com/watch?v=example5"
   
   - title: "Episode 55 - Experimental Night"
     date: "2023-12-06"
