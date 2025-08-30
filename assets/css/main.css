@@ -748,7 +748,7 @@ a:hover {
 .album-art {
     height: 300px;
     background-color: var(--dark-static-black);
-    border: 3px solid var(--washed-out-grey);
+    /* border: 3px solid var(--washed-out-grey); */
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -2707,7 +2707,62 @@ a:hover {
     position: relative;
 }
 
-/* Mobile optimization for podcast subscription in posts */
+/* Mini Podcast Subscribe Component */
+.podcast-subscribe-mini {
+    padding: 1rem;
+    background: var(--dark-static-black);
+    border: 2px solid var(--flickering-cyan);
+    margin: 1.5rem 0;
+    position: relative;
+}
+
+.subscribe-mini-title {
+    margin: 0 0 0.5rem 0;
+    color: var(--flickering-cyan);
+    font-family: 'Press Start 2P', monospace;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.platform-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.platform-link-mini {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
+    background: var(--flickering-cyan);
+    color: var(--dark-static-black);
+    text-decoration: none;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        98% 100%,
+        2% 100%
+    );
+}
+
+.platform-link-mini:hover {
+    background: var(--vhs-white);
+    transform: translateY(-1px);
+}
+
+.platform-icon-mini {
+    margin-right: 0.25rem;
+}
+
+.platform-arrow-mini {
+    margin-left: 0.25rem;
+    font-size: 0.75rem;
+}
+
+/* Mobile optimization for podcast components */
 @media (max-width: 768px) {
     .platform-grid-small {
         grid-template-columns: 1fr;
@@ -2715,6 +2770,14 @@ a:hover {
     
     .subscribe-title {
         font-size: 1.3rem;
+    }
+    
+    .platform-links {
+        flex-direction: column;
+    }
+    
+    .platform-link-mini {
+        width: fit-content;
     }
     
     .platform-card-small {

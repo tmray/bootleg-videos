@@ -11,10 +11,11 @@ This documentation covers all the features and customization options available f
 6. [Social Media Icons](#social-media-icons)
 7. [Site Configuration](#site-configuration)
 8. [VHS Aesthetic Features](#vhs-aesthetic-features)
-9. [File Structure](#file-structure)
-10. [Development Commands](#development-commands)
-11. [Troubleshooting](#troubleshooting)
-12. [Maintenance](#maintenance)
+9. [Podcast Features](#podcast-features)
+10. [File Structure](#file-structure)
+11. [Development Commands](#development-commands)
+12. [Troubleshooting](#troubleshooting)
+13. [Maintenance](#maintenance)
 
 ## Hero Section Customization
 
@@ -518,7 +519,66 @@ debug: true
 - Minimize external dependencies
 - Regular cleanup of unused assets
 
+## Podcast Features
+
+The site includes several podcast-related features and components for showcasing your podcast content.
+
+### Mini Podcast Subscribe Include
+
+A compact component for embedding podcast subscription links within posts or pages.
+
+**Basic Usage:**
+```liquid
+{% include podcast-subscribe-mini.html %}
+```
+
+**Features:**
+- Compact, inline design with VHS aesthetic
+- Horizontal platform links (stacks vertically on mobile)
+- Uses platform data from `_data/podcast.yml`
+- Maintains site's retro/VHS styling
+
+The component automatically pulls platform data from your `_data/podcast.yml` file, which should be structured as follows:
+
+```yaml
+platforms:
+  - name: "Spotify"
+    url: "https://open.spotify.com/show/your-show-id"
+    icon: "🎧"
+  - name: "Apple Podcasts"
+    url: "https://podcasts.apple.com/your-show-id"
+    icon: "🎵"
+  # Add more platforms as needed
+```
+
+### Styling
+
+The mini subscribe component includes:
+- VHS glitch effect
+- Jagged button edges using clip-path
+- Hover effects on platform links
+- Responsive design for all screen sizes
+- Site's color scheme and typography
+
+### Example Usage in Posts
+
+Add to any post or page content:
+
+```markdown
+Check out our latest episode about music production!
+
+{% include podcast-subscribe-mini.html %}
+
+In this episode, we dive deep into...
+```
+
+### Customization
+
+The component uses the site's VHS aesthetic by default. Colors and styles can be modified in:
+- `_includes/podcast-subscribe-mini.html` (component styles)
+- `assets/css/main.css` (global styles)
+
 ---
 
 **Last Updated**: August 2025
-**Version**: 1.0 
+**Version**: 1.0
