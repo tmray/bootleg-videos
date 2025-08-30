@@ -51,7 +51,16 @@ layout: default
                     {% endfor %}
                 </div>
             </div>
+
+            <!-- Transcript Section -->
+            {% if page.transcript_url %}
+            <div class="transcript-section" style="margin-top: 2rem;">
+                <h3>Episode Transcript</h3>
+                <p>Read the full transcript of this episode:</p>
+                <a href="{{ page.transcript_url | relative_url }}" class="btn btn-primary">View Transcript</a>
+            </div>
+            {% endif %}
             {% endif %}
         </div>
     </footer>
-</article> 
+</article>

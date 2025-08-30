@@ -1,0 +1,13 @@
+<!-- Mini Podcast Subscribe Section -->
+<div class="podcast-subscribe-mini vhs-glitch">
+    <h4 class="subscribe-mini-title">Listen on:</h4>
+    <div class="platform-links">
+        {% for platform in site.data.podcast.platforms %}
+        <a href="{{ platform.url }}" target="_blank" class="platform-link-mini">
+            <span class="platform-icon-mini">{{ platform.icon }}</span>
+            <span class="platform-name-mini">{{ platform.name }}</span>
+            <span class="platform-arrow-mini">↗</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
