@@ -808,7 +808,7 @@ a:hover {
     object-fit: cover;
     filter: sepia(30%) saturate(120%) contrast(110%) brightness(0.9);
     transition: all 0.3s ease;
-    border: 3px solid var(--washed-out-grey);
+    border-bottom: 3px solid var(--washed-out-grey); /* Card already has border so one needed on image bottom */
     border-radius: 0;
     clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
 }
