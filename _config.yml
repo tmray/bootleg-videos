@@ -2,7 +2,7 @@
 title: Lorenzo's Music
 email: info@lorenzosmusic.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Experimental lofi rock band creating open-source music.
+  Experimental art rock band creating open-source music.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://lorenzosmusic.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: lorenzosmusic
@@ -25,7 +25,7 @@ bandcamp_username: lorenzosmusic
 # Hero Section Configuration
 hero:
   title: "LORENZO'S MUSIC"
-  subtitle: "Experimental lofi rock band creating open-source music"
+  subtitle: "Experimental art rock band creating open-source music"
   background_image: "/assets/images/lorenzos-music-live-shots-header-5.jpg"  # Desktop background image
   background_image_mobile: "/assets/images/lorenzos-music-square-header-band-image.jpg"  # Mobile background image (optional)
   buttons:
@@ -48,12 +48,18 @@ music:
     spotify_url: "https://open.spotify.com/album/4HlXFCbtM3b6Bb8ZTNxnCW?si=LASqoPXTRjaHt2c6ccGwVg"
     bandcamp_url: "https://faircamp.lorenzosmusic.com/lorenzos-remixes-vol-2/"
     tracks:
-      - "Digital Sunset"
-      - "Echo Chamber"
-      - "Atmospheric Dreams"
-      - "Lofi Rock Fusion"
-      - "Ambient Waves"
-      - "Experimental Journey"
+      - "If I was alone (Da Dun & I Mix)"
+      - "Melancholy friction (For Too Long Manifesto Mix)"
+      - "Variation witch (Witch Slew Mix)"
+      - "Friction called quest (Taim Mix)"
+      - "Blue water friction (Boombox Tape Mix)"
+      - "Could take for years (Watcha mix)"
+      - "I can only miss you (Kikhausen Mix)"
+      - "Rainy day friction (Kikhausen Mix)"
+      - "If I was alone (AxWax Mix)"
+      - "Friction called quest (All that time Velcro Mary Mix)"
+      - "Friction called quest (Headsnack Mix)"
+      - "Roulette (Break the bank Timezone LaFontaine Mix)"
   
   releases:
     - title: "Friction"
