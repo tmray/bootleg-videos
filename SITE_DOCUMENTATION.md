@@ -106,6 +106,29 @@ youtube_url: "https://www.youtube.com/watch?v=YOUR_VIDEO_ID"
 ```yaml
 behind_scenes_url: "/path/to/related-post"  # Link to related behind-the-scenes post
 ```
+### Behind the Scenes URL
+
+For video posts, you can link to a related behind-the-scenes post using the `behind_scenes_url` front matter field:
+
+```yaml
+---
+title: "New Music Video Release"
+behind_scenes_url: "/blog/2024/making-of-new-video"  # Link to related behind-the-scenes post
+---
+```
+
+This will add a "Behind the Scenes" button in the video post that links to the specified post, giving viewers access to additional content about the video's creation process.
+
+Example usage in video post front matter:
+```yaml
+---
+layout: post
+title: "Our Latest Music Video"
+date: 2024-02-15
+categories: videos
+behind_scenes_url: "/blog/2024/how-we-made-our-latest-video"
+---
+```
 
 ### Video Tags
 
