@@ -104,34 +104,55 @@ title: Home
     <div class="container">
         <h2 class="section-title">Featured Music</h2>
         <div class="music-grid">
+            <!-- Latest Album Card -->
             <div class="music-card vhs-glitch">
                 <div class="music-card-image">
+                    {% if site.music.latest_album.image %}
+                    <img src="{{ site.music.latest_album.image | relative_url }}" alt="{{ site.music.latest_album.title }}">
+                    {% else %}
                     <div class="placeholder-album">ALBUM ART</div>
+                    {% endif %}
                 </div>
                 <div class="music-card-content">
-                    <h3>Latest Release</h3>
-                    <p>Our newest experimental lofi rock album featuring atmospheric soundscapes and raw energy.</p>
-                    <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Listen</a>
+                    <h3>{{ site.music.latest_album.title }}</h3>
+                    <p>{{ site.music.latest_album.description | truncate: 120 }}</p>
+                    <a href="{{ site.music.latest_album.spotify_url }}" class="btn btn-outline">Listen</a>
                 </div>
             </div>
+
+            <!-- Live Performance Card -->
+            {% assign latest_episode = site.data.live_show.episodes | first %}
             <div class="music-card vhs-glitch">
                 <div class="music-card-image">
-                    <div class="placeholder-album">ALBUM ART</div>
+                    {% if latest_episode.thumbnail %}
+                    <img src="{{ latest_episode.thumbnail }}" alt="{{ latest_episode.title }}">
+                    {% else %}
+                    <div class="placeholder-album">LIVE SHOW</div>
+                    {% endif %}
                 </div>
                 <div class="music-card-content">
                     <h3>Live Performance</h3>
-                    <p>Raw, unfiltered live recordings from our underground shows and experimental sessions.</p>
-                    <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Watch</a>
+                    <p>{{ latest_episode.title }}</p>
+                    <a href="{{ '/live-show' | relative_url }}" class="btn btn-outline">Watch Live</a>
                 </div>
             </div>
+
+            <!-- Music Video Card -->
+            {% assign latest_music_video = site.posts | where_exp: "post", "post.tags contains 'music-video'" | first %}
             <div class="music-card vhs-glitch">
                 <div class="music-card-image">
-                    <div class="placeholder-album">ALBUM ART</div>
+                    {% if latest_music_video.thumbnail %}
+                    <img src="{{ latest_music_video.thumbnail }}" alt="{{ latest_music_video.title }}">
+                    {% elsif latest_music_video.image %}
+                    <img src="{{ latest_music_video.image }}" alt="{{ latest_music_video.title }}">
+                    {% else %}
+                    <div class="placeholder-album">MUSIC VIDEO</div>
+                    {% endif %}
                 </div>
                 <div class="music-card-content">
-                    <h3>Experimental Tracks</h3>
-                    <p>Unreleased demos and experimental tracks showcasing our creative process.</p>
-                    <a href="{{ '/music' | relative_url }}" class="btn btn-outline">Explore</a>
+                    <h3>{{ latest_music_video.title }}</h3>
+                    <p>{{ latest_music_video.excerpt | default: latest_music_video.description | truncate: 120 }}</p>
+                    <a href="{{ latest_music_video.url | relative_url }}" class="btn btn-outline">Watch Video</a>
                 </div>
             </div>
         </div>

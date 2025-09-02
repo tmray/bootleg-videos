@@ -515,6 +515,25 @@ a:hover {
     overflow: hidden;
 }
 
+.music-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.music-card:hover .music-card-image img {
+    transform: scale(1.05);
+}
+
+.music-card-image .placeholder-album {
+    z-index: 1;
+}
+
 .music-card-image::before {
     content: '';
     position: absolute;
@@ -748,7 +767,6 @@ a:hover {
 .album-art {
     height: 300px;
     background-color: var(--dark-static-black);
-    /* border: 3px solid var(--washed-out-grey); */
     border-radius: 0;
     display: flex;
     align-items: center;
@@ -808,7 +826,7 @@ a:hover {
     object-fit: cover;
     filter: sepia(30%) saturate(120%) contrast(110%) brightness(0.9);
     transition: all 0.3s ease;
-    border-bottom: 3px solid var(--washed-out-grey); /* Card already has border so one needed on image bottom */
+    border-bottom: 3px solid var(--washed-out-grey);
     border-radius: 0;
     clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
 }
@@ -4153,12 +4171,15 @@ a:hover {
 
 .post-content ul li {
     list-style-type: disc;
-    list-style-color: var(--flickering-cyan);
 }
 
 .post-content ol li {
     list-style-type: decimal;
-    list-style-color: var(--flickering-cyan);
+}
+
+.post-content ul li::marker,
+.post-content ol li::marker {
+    color: var(--flickering-cyan);
 }
 
 .post-content strong {
