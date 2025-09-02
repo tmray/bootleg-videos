@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Try it this way - Live Band Practice Podcast - ep47"
+    date: "2025-08-27"
+    duration: "31:55"
+    description: "We experiment with the song &quot;Take it when it comes&quot; while Tom realizes he keeps using strange accents."
+    thumbnail: "https://i.ytimg.com/vi/inV8gLUdsVk/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=inV8gLUdsVk&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=inV8gLUdsVk"
+
   - title: "Take it song! Live Band Practice Podcast - ep46"
     date: "2025-08-20"
     duration: "29:40"
@@ -73,14 +81,7 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/Kq4UCerNUAs/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=Kq4UCerNUAs&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=Kq4UCerNUAs"
-  
-  - title: "Episode 55 - Experimental Night"
-    date: "2023-12-06"
-    duration: "2:05:33"
-    description: "We experiment with new sounds and effects while chatting with viewers."
-    thumbnail: "https://i.ytimg.com/vi/example6/maxresdefault.jpg"
-    youtube_url: "https://youtube.com/watch?v=example6"
-    youtube_music_url: "https://music.youtube.com/watch?v=example6"
+
 
 # How to Watch & Listen Platforms
 platforms:
