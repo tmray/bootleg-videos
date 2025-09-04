@@ -1,7 +1,12 @@
 ---
 layout: post
+title: "Transcript: Joe Cannon - Resurrectionists - From Punk Roots to Chamber Americana"
 categories: [podcast]
 ---
+{% include podcast-subscribe-mini.html %}
+
+# Episode Transcript
+
 My band, Lorenzo's Music, has just released a remix album
 
 Tom Ray: Before we get started today, I just wanted to make a quick announcement. My band, Lorenzo's Music, has just released a remix album. It is the second in a series of remix albums we've done. It's called Lorenzo's Remixes, Volume 2. It includes remixes from musicians located all over the world. So go check out the album Lorenzo's Remixes, Volume M2, and you can hear all the different tracks and reimagine songs right there. Now onto the show.
