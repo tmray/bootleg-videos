@@ -2,6 +2,7 @@
 layout: page
 title: Blog
 subtitle: Latest News and Updates
+paginate: 9
 ---
 
 <div class="blog-content">
@@ -10,7 +11,7 @@ subtitle: Latest News and Updates
     </div>
 
     <div class="blog-posts">
-        {% for post in site.posts %}
+        {% for post in paginator.posts %}
         <article class="blog-post">
             <div class="post-header">
                 <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
@@ -23,7 +24,6 @@ subtitle: Latest News and Updates
                     {% endif %}
                 </div>
             </div>
-            
             <div class="post-excerpt">
                 {% if post.excerpt %}
                 {{ post.excerpt }}
@@ -31,7 +31,6 @@ subtitle: Latest News and Updates
                 {{ post.content | strip_html | truncatewords: 50 }}
                 {% endif %}
             </div>
-            
             <div class="post-footer">
                 <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
                 {% if post.tags %}
@@ -46,10 +45,30 @@ subtitle: Latest News and Updates
         {% endfor %}
     </div>
 
-    {% if site.posts.size == 0 %}
+
+    {% if paginator.total_pages > 1 %}
+    <nav class="pagination pagination-vhs vhs-glitch">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn prev">&laquo; Prev</a>
+        {% endif %}
+                <span class="pagination-pages">
+                {% for page in (1..paginator.total_pages) %}
+                {% if page == 1 %}
+                    <a href="{{ '/blog/' | relative_url }}" class="pagination-btn page{% if page == paginator.page %} current{% endif %}">{{ page }}</a>
+                {% else %}
+                    <a href="{{ '/blog/page' | append: page | append: '/' | relative_url }}" class="pagination-btn page{% if page == paginator.page %} current{% endif %}">{{ page }}</a>
+                {% endif %}
+                {% endfor %}
+                </span>
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-btn next">Next &raquo;</a>
+        {% endif %}
+    </nav>
+    {% endif %}
+
+    {% if paginator.posts.size == 0 %}
     <div class="no-posts">
-        <h3>No posts yet</h3>
-        <p>We're working on our first blog post. Check back soon for updates!</p>
+        <p>No blog posts found.</p>
     </div>
     {% endif %}
-</div> 
+</div>

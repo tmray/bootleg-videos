@@ -101,6 +101,7 @@ permalink: /:title/
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # Collections
 collections:
@@ -131,3 +132,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/ 
+
+# Pagination settings for blog
+paginate: 9
+paginate_path: "/blog/page:num/"
