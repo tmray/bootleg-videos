@@ -113,7 +113,7 @@ a:hover {
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(153, 51, 255, 0.3), transparent);
     animation: vhs-scan 4s infinite;
-    z-index: 10;
+    z-index: 1;
 }
 
 @keyframes vhs-scan {
@@ -4083,6 +4083,89 @@ a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 0;
+}
+
+/* VHS Pagination Styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 2.5rem 0 1.5rem 0;
+    position: relative;
+    z-index: 2;
+    font-family: 'Press Start 2P', 'VT323', monospace;
+}
+
+.pagination-btn {
+    display: inline-block;
+    min-width: 2.5rem;
+    padding: 0.75rem 1.2rem;
+    margin: 0 0.2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--flickering-cyan);
+    background: var(--dark-static-black);
+    border: 2.5px solid var(--flickering-cyan);
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px 0 var(--distorted-purple);
+    box-shadow: 0 2px 8px rgba(0,255,255,0.08);
+    clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px));
+    transition: all 0.2s cubic-bezier(.4,2,.6,1);
+    position: relative;
+    overflow: hidden;
+}
+
+.pagination-btn.current,
+.pagination-btn:hover {
+    background: var(--flickering-cyan);
+    color: var(--dark-static-black);
+    border-color: var(--distorted-purple);
+    text-shadow: 2px 2px 0 var(--faded-red);
+    box-shadow: 0 0 16px var(--flickering-cyan);
+    z-index: 2;
+}
+
+.pagination-btn.current {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border-width: 3px;
+}
+
+.pagination-btn.prev,
+.pagination-btn.next {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--distorted-purple);
+    color: var(--off-white-beige);
+    border-color: var(--faded-red);
+}
+
+.pagination-btn.prev:hover,
+.pagination-btn.next:hover {
+    background: var(--flickering-cyan);
+    color: var(--dark-static-black);
+    border-color: var(--distorted-purple);
+}
+
+.pagination-pages {
+    display: flex;
+    gap: 0.2rem;
+}
+
+/* Responsive pagination for mobile */
+@media (max-width: 600px) {
+    .pagination {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .pagination-btn {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+    }
 }
 
 .post-header {
