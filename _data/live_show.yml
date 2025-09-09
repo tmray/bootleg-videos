@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Picture it in your head Live Band Practice Show - ep48"
+    date: "2025-09-03"
+    duration: "33:11"
+    description: "We work on the song &quot;Picture it all&quot;. Plus, Rob is being contrary as Tom does a Spinal Tap impression. And a random amp hum is gone."
+    thumbnail: "https://i.ytimg.com/vi/YpujQynybaI/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=YpujQynybaI&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=YpujQynybaI"
+
   - title: "Try it this way - Live Band Practice Podcast - ep47"
     date: "2025-08-27"
     duration: "31:55"
@@ -73,15 +81,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/9wZUvJR8NnE/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=9wZUvJR8NnE&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=9wZUvJR8NnE"
-
-  - title: "Band practice: Makin' Music Live! - ep42"
-    date: "2025-07-23"
-    duration: "30:16"
-    description: "We play music, talk and continue working on the song, Low"
-    thumbnail: "https://i.ytimg.com/vi/Kq4UCerNUAs/maxresdefault.jpg"
-    youtube_url: "https://www.youtube.com/watch?v=Kq4UCerNUAs&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
-    youtube_music_url: "https://music.youtube.com/watch?v=Kq4UCerNUAs"
-
 
 # How to Watch & Listen Platforms
 platforms:
