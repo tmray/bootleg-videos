@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Learn it live Live Band Practice Show - ep49"
+    date: "2025-09-10"
+    duration: "25:41"
+    description: "Tom says every musician has a warm up riff, Bryan gets a text and the band takes one last pass at &quot;Picture it all&quot;."
+    thumbnail: "https://i.ytimg.com/vi/v3W3JzkT2Pg/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=v3W3JzkT2Pg&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=v3W3JzkT2Pg"
+
   - title: "Picture it in your head Live Band Practice Show - ep48"
     date: "2025-09-03"
     duration: "33:11"
@@ -73,14 +81,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/j7d0NLLUpj4/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=j7d0NLLUpj4&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=j7d0NLLUpj4"
-
-  - title: "Oh jeez, we're live! Band practice - ep43"
-    date: "2025-07-30"
-    duration: "30:28"
-    description: "Our guitarist Eric joins us in the live chat and we try to finish working on Low."
-    thumbnail: "https://i.ytimg.com/vi/9wZUvJR8NnE/maxresdefault.jpg"
-    youtube_url: "https://www.youtube.com/watch?v=9wZUvJR8NnE&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
-    youtube_music_url: "https://music.youtube.com/watch?v=9wZUvJR8NnE"
 
 # How to Watch & Listen Platforms
 platforms:
