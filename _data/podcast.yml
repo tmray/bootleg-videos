@@ -53,13 +53,13 @@ platforms:
 
 # Podcast Stats (optional)
 stats:
-  - number: "60"
+  - number: "61"
     label: "Episodes"
   
-  - number: "44"
+  - number: "45"
     label: "Guests"
   
-  - number: "1.37k"
+  - number: "1.44k"
     label: "Downloads"
   
   - number: "5"
