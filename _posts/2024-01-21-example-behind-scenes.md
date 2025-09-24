@@ -3,7 +3,7 @@ layout: post
 title: "Making of Friction Tango - Behind the Scenes"
 date: 2024-01-21
 categories: [examples]
-tags: [behind-the-scenes, production, experimental]
+tags: [behind-the-scenes, production, experimental, news]
 author: Lorenzo's Music
 excerpt: "Go behind the scenes to see how we created the music video for 'Friction Tango' using vintage film techniques and digital manipulation."
 thumbnail: https://i.ytimg.com/vi/example-bts/hqdefault.jpg
