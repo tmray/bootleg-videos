@@ -3,7 +3,7 @@ layout: post
 title: "Call-to-Action Examples"
 date: 2024-01-25
 categories: [examples]
-tags: [cta, examples, mailchimp]
+tags: [cta, examples, mailchimp, news]
 author: Lorenzo's Music
 excerpt: "Examples of how to use the new call-to-action includes in your posts"
 ---

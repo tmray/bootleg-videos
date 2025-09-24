@@ -7,7 +7,7 @@ author: "Tom Ray"
 excerpt: "In this episode of Lorenzo's Music Podcast, I sit down with Setto, a multifaceted musician and entrepreneur who runs the innovative platform Basspistol."
 guest: "Setto"
 episode_number: "15"
-episode_image: "https://i.ytimg.com/vi/pwmFnWG6BEY/maxresdefault.jpg"
+image: "https://i.ytimg.com/vi/pwmFnWG6BEY/maxresdefault.jpg"
 audio_url: "https://creators.spotify.com/pod/profile/lorenzosmusic/episodes/Basspistol---Music--Promotion-and-Navigating-The-Fediverse-e369vbj/a-ac33esb"
 transcript_url: "/podcast/episode-jon-worthy-transcript"
 ---

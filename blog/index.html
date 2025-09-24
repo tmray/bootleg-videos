@@ -2,7 +2,6 @@
 layout: page
 title: Blog
 subtitle: Latest News and Updates
-paginate: 9
 ---
 
 <div class="blog-content">
@@ -10,65 +9,210 @@ paginate: 9
         <p>Stay updated with the latest news, behind-the-scenes stories, and insights into our creative process. From recording sessions to tour updates, we share it all here.</p>
     </div>
 
-    <div class="blog-posts">
-        {% for post in paginator.posts %}
-        <article class="blog-post">
-            <div class="post-header">
-                <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-                <div class="post-meta">
-                    <time datetime="{{ post.date | date_to_xmlschema }}">
-                        {{ post.date | date: "%B %d, %Y" }}
-                    </time>
-                    {% if post.author %}
-                    <span class="post-author">by {{ post.author }}</span>
+    <!-- Featured: Blog tag -->
+    <section class="blog-section vhs-static">
+        <div class="container">
+            <h2 class="section-title">From the Blog</h2>
+            {% assign blog_posts = site.posts | where_exp: 'p', 'p.tags contains "blog"' %}
+            {% assign blog_featured = blog_posts | first %}
+            {% assign blog_rest = blog_posts | slice: 1, 2 %}
+
+            {% if blog_featured %}
+            <div class="featured-card vhs-glitch">
+                <a href="{{ blog_featured.url | relative_url }}" class="featured-media" aria-label="{{ blog_featured.title }}">
+                    {% assign thumb = blog_featured.thumbnail | default: blog_featured.image | default: blog_featured.featured_image %}
+                    {% if thumb %}
+                    {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                    {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
                     {% endif %}
+                    <img src="{{ thumb }}" alt="{{ blog_featured.title }} thumbnail" class="featured-image">
+                    {% elsif blog_featured.youtube_url %}
+                    {% assign yt_id = '' %}
+                    {% if blog_featured.youtube_url contains 'youtu.be' %}
+                    {% assign yt_id = blog_featured.youtube_url | split: '/' | last %}
+                    {% elsif blog_featured.youtube_url contains 'watch?v=' %}
+                    {% assign yt_id = blog_featured.youtube_url | split: 'v=' | last | split: '&' | first %}
+                    {% endif %}
+                    <img src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="{{ blog_featured.title }} thumbnail" class="featured-image">
+                    {% else %}
+                    <div class="featured-placeholder"><span>{{ blog_featured.title }}</span></div>
+                    {% endif %}
+                </a>
+                <div class="featured-content">
+                    <h3 class="featured-title"><a href="{{ blog_featured.url | relative_url }}">{{ blog_featured.title }}</a></h3>
+                    <div class="featured-meta">
+                        <time datetime="{{ blog_featured.date | date_to_xmlschema }}">{{ blog_featured.date | date: "%B %d, %Y" }}</time>
+                        {% if blog_featured.author %}<span class="post-author">by {{ blog_featured.author }}</span>{% endif %}
+                    </div>
+                    <p class="featured-excerpt">{{ blog_featured.excerpt | default: blog_featured.content | strip_html | truncatewords: 40 }}</p>
+                    <div class="featured-actions">
+                        <a href="{{ blog_featured.url | relative_url }}" class="btn btn-primary">Read More</a>
+                    </div>
                 </div>
             </div>
-            <div class="post-excerpt">
-                {% if post.excerpt %}
-                {{ post.excerpt }}
-                {% else %}
-                {{ post.content | strip_html | truncatewords: 50 }}
-                {% endif %}
-            </div>
-            <div class="post-footer">
-                <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
-                {% if post.tags %}
-                <div class="post-tags">
-                    {% for tag in post.tags %}
-                    <a href="{{ '/tags/' | append: tag | downcase | replace: ' ', '-' | relative_url }}" class="tag">{{ tag }}</a>
-                    {% endfor %}
-                </div>
-                {% endif %}
-            </div>
-        </article>
-        {% endfor %}
-    </div>
+            {% endif %}
 
-
-    {% if paginator.total_pages > 1 %}
-    <nav class="pagination pagination-vhs vhs-glitch">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path | relative_url }}" class="pagination-btn prev">&laquo; Prev</a>
-        {% endif %}
-                <span class="pagination-pages">
-                {% for page in (1..paginator.total_pages) %}
-                {% if page == 1 %}
-                    <a href="{{ '/blog/' | relative_url }}" class="pagination-btn page{% if page == paginator.page %} current{% endif %}">{{ page }}</a>
-                {% else %}
-                    <a href="{{ '/blog/page' | append: page | append: '/' | relative_url }}" class="pagination-btn page{% if page == paginator.page %} current{% endif %}">{{ page }}</a>
-                {% endif %}
+            {% if blog_rest and blog_rest.size > 0 %}
+            <div class="mini-card-grid">
+                {% for post in blog_rest %}
+                <article class="mini-card vhs-glitch">
+                    <a href="{{ post.url | relative_url }}" class="mini-media" aria-label="{{ post.title }}">
+                        {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+                        {% if thumb %}
+                        {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                        {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
+                        {% endif %}
+                        <img src="{{ thumb }}" alt="{{ post.title }} thumbnail" class="mini-image">
+                        {% elsif post.youtube_url %}
+                        {% assign yt_id = '' %}
+                        {% if post.youtube_url contains 'youtu.be' %}
+                        {% assign yt_id = post.youtube_url | split: '/' | last %}
+                        {% elsif post.youtube_url contains 'watch?v=' %}
+                        {% assign yt_id = post.youtube_url | split: 'v=' | last | split: '&' | first %}
+                        {% endif %}
+                        <img src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="{{ post.title }} thumbnail" class="mini-image">
+                        {% else %}
+                        <div class="mini-placeholder"><span>{{ post.title }}</span></div>
+                        {% endif %}
+                    </a>
+                    <div class="mini-content">
+                        <h3 class="mini-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                        <div class="mini-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                        </div>
+                    </div>
+                </article>
                 {% endfor %}
-                </span>
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path | relative_url }}" class="pagination-btn next">Next &raquo;</a>
-        {% endif %}
-    </nav>
-    {% endif %}
+            </div>
+            {% endif %}
 
-    {% if paginator.posts.size == 0 %}
-    <div class="no-posts">
-        <p>No blog posts found.</p>
-    </div>
-    {% endif %}
+            <div class="section-actions" style="margin-top: 1.25rem;">
+                <a href="{{ '/tags/blog/' | relative_url }}" class="btn btn-outline">See more blog posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured: News tag -->
+    <section class="blog-section vhs-static">
+        <div class="container">
+            <h2 class="section-title">Band News</h2>
+            {% assign news_posts = site.posts | where_exp: 'p', 'p.tags contains "news"' %}
+            {% assign news_featured = news_posts | first %}
+            {% assign news_rest = news_posts | slice: 1, 2 %}
+
+            {% if news_featured %}
+            <div class="featured-card vhs-glitch">
+                <a href="{{ news_featured.url | relative_url }}" class="featured-media" aria-label="{{ news_featured.title }}">
+                    {% assign thumb = news_featured.thumbnail | default: news_featured.image | default: news_featured.featured_image %}
+                    {% if thumb %}
+                    {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                    {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
+                    {% endif %}
+                    <img src="{{ thumb }}" alt="{{ news_featured.title }} thumbnail" class="featured-image">
+                    {% elsif news_featured.youtube_url %}
+                    {% assign yt_id = '' %}
+                    {% if news_featured.youtube_url contains 'youtu.be' %}
+                    {% assign yt_id = news_featured.youtube_url | split: '/' | last %}
+                    {% elsif news_featured.youtube_url contains 'watch?v=' %}
+                    {% assign yt_id = news_featured.youtube_url | split: 'v=' | last | split: '&' | first %}
+                    {% endif %}
+                    <img src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="{{ news_featured.title }} thumbnail" class="featured-image">
+                    {% else %}
+                    <div class="featured-placeholder"><span>{{ news_featured.title }}</span></div>
+                    {% endif %}
+                </a>
+                <div class="featured-content">
+                    <h3 class="featured-title"><a href="{{ news_featured.url | relative_url }}">{{ news_featured.title }}</a></h3>
+                    <div class="featured-meta">
+                        <time datetime="{{ news_featured.date | date_to_xmlschema }}">{{ news_featured.date | date: "%B %d, %Y" }}</time>
+                        {% if news_featured.author %}<span class="post-author">by {{ news_featured.author }}</span>{% endif %}
+                    </div>
+                    <p class="featured-excerpt">{{ news_featured.excerpt | default: news_featured.content | strip_html | truncatewords: 40 }}</p>
+                    <div class="featured-actions">
+                        <a href="{{ news_featured.url | relative_url }}" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if news_rest and news_rest.size > 0 %}
+            <div class="mini-card-grid">
+                {% for post in news_rest %}
+                <article class="mini-card vhs-glitch">
+                    <a href="{{ post.url | relative_url }}" class="mini-media" aria-label="{{ post.title }}">
+                        {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+                        {% if thumb %}
+                        {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                        {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
+                        {% endif %}
+                        <img src="{{ thumb }}" alt="{{ post.title }} thumbnail" class="mini-image">
+                        {% elsif post.youtube_url %}
+                        {% assign yt_id = '' %}
+                        {% if post.youtube_url contains 'youtu.be' %}
+                        {% assign yt_id = post.youtube_url | split: '/' | last %}
+                        {% elsif post.youtube_url contains 'watch?v=' %}
+                        {% assign yt_id = post.youtube_url | split: 'v=' | last | split: '&' | first %}
+                        {% endif %}
+                        <img src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="{{ post.title }} thumbnail" class="mini-image">
+                        {% else %}
+                        <div class="mini-placeholder"><span>{{ post.title }}</span></div>
+                        {% endif %}
+                    </a>
+                    <div class="mini-content">
+                        <h3 class="mini-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                        <div class="mini-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+            {% endif %}
+
+            <div class="section-actions" style="margin-top: 1.25rem;">
+                <a href="{{ '/tags/news/' | relative_url }}" class="btn btn-outline">See more news</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest overall posts -->
+    <section class="blog-section vhs-static">
+        <div class="container">
+            <h2 class="section-title">Latest from the Site</h2>
+            <div class="mini-card-grid">
+                {% for post in site.posts limit:4 %}
+                <article class="mini-card vhs-glitch">
+                    <a href="{{ post.url | relative_url }}" class="mini-media" aria-label="{{ post.title }}">
+                        {% assign thumb = post.thumbnail | default: post.image | default: post.featured_image %}
+                        {% if thumb %}
+                        {% if thumb contains 'i.ytimg.com' and thumb contains '/default.jpg' %}
+                        {% assign thumb = thumb | replace: '/default.jpg', '/hqdefault.jpg' %}
+                        {% endif %}
+                        <img src="{{ thumb }}" alt="{{ post.title }} thumbnail" class="mini-image">
+                        {% elsif post.youtube_url %}
+                        {% assign yt_id = '' %}
+                        {% if post.youtube_url contains 'youtu.be' %}
+                        {% assign yt_id = post.youtube_url | split: '/' | last %}
+                        {% elsif post.youtube_url contains 'watch?v=' %}
+                        {% assign yt_id = post.youtube_url | split: 'v=' | last | split: '&' | first %}
+                        {% endif %}
+                        <img src="https://i.ytimg.com/vi/{{ yt_id }}/hqdefault.jpg" alt="{{ post.title }} thumbnail" class="mini-image">
+                        {% else %}
+                        <div class="mini-placeholder"><span>{{ post.title }}</span></div>
+                        {% endif %}
+                    </a>
+                    <div class="mini-content">
+                        <h3 class="mini-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                        <div class="mini-meta">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                        </div>
+                    </div>
+                </article>
+                {% endfor %}
+            </div>
+            <div class="section-actions" style="margin-top: 1.25rem;">
+                <a href="{{ '/all-posts/' | relative_url }}" class="btn btn-outline">See all posts</a>
+            </div>
+        </div>
+    </section>
 </div>

@@ -135,4 +135,4 @@ exclude:
 
 # Pagination settings for blog
 paginate: 9
-paginate_path: "/blog/page:num/"
+paginate_path: "/all-posts/page:num/"

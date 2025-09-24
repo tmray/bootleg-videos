@@ -4,7 +4,7 @@ title: "Welcome to Lorenzo's Music"
 date: 2024-01-15
 author: Lorenzo
 categories: [examples]
-tags: [welcome, introduction, music]
+tags: [welcome, introduction, music, news]
 excerpt: "Welcome to our new website! We're excited to share our experimental lofi rock journey with you."
 ---
 
