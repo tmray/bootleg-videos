@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "One more try to learn this song - The Live & Unfiltered Show - ep52"
+    date: "2025-10-01"
+    duration: "36:01"
+    description: "The band ponders giving themselves nicknames and works on the song Until Now one more time."
+    thumbnail: "https://i.ytimg.com/vi/gsH3eLqaA14/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=gsH3eLqaA14&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=gsH3eLqaA14"
+
   - title: "How's this go? Band Practice Stream - ep51"
     date: "2025-09-24"
     duration: "35:39"
@@ -73,14 +81,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/inV8gLUdsVk/maxresdefault.jpg"
     youtube_url: "https://youtube.com/watch?v=inV8gLUdsVk&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=inV8gLUdsVk"
-
-  - title: "Take it song! Live Band Practice Podcast - ep46"
-    date: "2025-08-20"
-    duration: "29:40"
-    description: "Tom gets frazzled during a song and Bryan attempts to learn &amp;Take it when it comes&amp;, a song he may have never have played before!"
-    thumbnail: "https://i.ytimg.com/vi/9lgteiIAZ2s/maxresdefault.jpg"
-    youtube_url: "https://www.youtube.com/watch?v=9lgteiIAZ2s&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
-    youtube_music_url: "https://music.youtube.com/watch?v=9lgteiIAZ2s"
 
 # How to Watch & Listen Platforms
 platforms:
