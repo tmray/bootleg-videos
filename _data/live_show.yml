@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "When we try it at band practice - The Live & Unfiltered Show - ep53"
+    date: "2025-10-08"
+    duration: "49:03"
+    description: "In a special version of the show we practice our setlist for the Ubuntu Summit live stream."
+    thumbnail: "https://i.ytimg.com/vi/QwQFLkJqG6U/maxresdefault.jpg"
+    youtube_url: "https://youtube.com/watch?v=QwQFLkJqG6U&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=QwQFLkJqG6U"
+
   - title: "One more try to learn this song - The Live & Unfiltered Show - ep52"
     date: "2025-10-01"
     duration: "36:01"
@@ -73,14 +81,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/YpujQynybaI/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=YpujQynybaI&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=YpujQynybaI"
-
-  - title: "Try it this way - Live Band Practice Podcast - ep47"
-    date: "2025-08-27"
-    duration: "31:55"
-    description: "We experiment with the song &quot;Take it when it comes&quot; while Tom realizes he keeps using strange accents."
-    thumbnail: "https://i.ytimg.com/vi/inV8gLUdsVk/maxresdefault.jpg"
-    youtube_url: "https://youtube.com/watch?v=inV8gLUdsVk&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
-    youtube_music_url: "https://music.youtube.com/watch?v=inV8gLUdsVk"
 
 # How to Watch & Listen Platforms
 platforms:
