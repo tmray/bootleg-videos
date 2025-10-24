@@ -34,10 +34,18 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Did we do it right? Live band practice - ep54"
+    date: "2025-10-15"
+    duration: "28:26"
+    description: "We work on the song &quot;Until now&quot;, and play some others from our set. Tom has a story about getting his ears flushed and somehow we get on the subject of Brooklyn 99."
+    thumbnail: "https://i.ytimg.com/vi/rHmI2eZCgOQ/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=rHmI2eZCgOQ&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=rHmI2eZCgOQ"
+
   - title: "When we try it at band practice - The Live & Unfiltered Show - ep53"
     date: "2025-10-08"
     duration: "49:03"
-    description: "In a special version of the show we practice our setlist for the Ubuntu Summit live stream."
+    description: "In a special version of the show we practice our set list for the Ubuntu Summit live stream."
     thumbnail: "https://i.ytimg.com/vi/QwQFLkJqG6U/maxresdefault.jpg"
     youtube_url: "https://youtube.com/watch?v=QwQFLkJqG6U&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=QwQFLkJqG6U"
@@ -73,14 +81,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/v3W3JzkT2Pg/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=v3W3JzkT2Pg&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=v3W3JzkT2Pg"
-
-  - title: "Picture it in your head Live Band Practice Show - ep48"
-    date: "2025-09-03"
-    duration: "33:11"
-    description: "We work on the song &quot;Picture it all&quot;. Plus, Rob is being contrary as Tom does a Spinal Tap impression. And a random amp hum is gone."
-    thumbnail: "https://i.ytimg.com/vi/YpujQynybaI/maxresdefault.jpg"
-    youtube_url: "https://www.youtube.com/watch?v=YpujQynybaI&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
-    youtube_music_url: "https://music.youtube.com/watch?v=YpujQynybaI"
 
 # How to Watch & Listen Platforms
 platforms:
