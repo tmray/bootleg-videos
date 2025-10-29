@@ -34,6 +34,14 @@ expectations:
 
 # Latest Episodes (add your recent episodes here)
 episodes:
+  - title: "Let's try this new one - Live band practice - ep55"
+    date: "2025-10-22"
+    duration: "32:53"
+    description: "Tom talks about cereal and discusses how the band Boston was one guy, The band plays songs and works on a new one called &quot;Down it goes&quot;."
+    thumbnail: "https://i.ytimg.com/vi/Qxyv6E8DjVY/maxresdefault.jpg"
+    youtube_url: "https://www.youtube.com/watch?v=Qxyv6E8DjVY&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
+    youtube_music_url: "https://music.youtube.com/watch?v=Qxyv6E8DjVY"
+
   - title: "Did we do it right? Live band practice - ep54"
     date: "2025-10-15"
     duration: "28:26"
@@ -73,14 +81,6 @@ episodes:
     thumbnail: "https://i.ytimg.com/vi/Wyc7S9kobxQ/maxresdefault.jpg"
     youtube_url: "https://www.youtube.com/watch?v=Wyc7S9kobxQ&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
     youtube_music_url: "https://music.youtube.com/watch?v=Wyc7S9kobxQ"
-
-  - title: "Learn it live Live Band Practice Show - ep49"
-    date: "2025-09-10"
-    duration: "25:41"
-    description: "Tom says every musician has a warm up riff, Bryan gets a text and the band takes one last pass at &quot;Picture it all&quot;."
-    thumbnail: "https://i.ytimg.com/vi/v3W3JzkT2Pg/maxresdefault.jpg"
-    youtube_url: "https://www.youtube.com/watch?v=v3W3JzkT2Pg&list=PLbvJrJ34c9Mmx4NdEKeYHSUJsVbO-gJvg"
-    youtube_music_url: "https://music.youtube.com/watch?v=v3W3JzkT2Pg"
 
 # How to Watch & Listen Platforms
 platforms:
