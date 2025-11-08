@@ -3311,70 +3311,51 @@ a:hover {
     margin-bottom: 4rem;
 }
 
-.expectations-grid {
+.expectations-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1rem;
     margin-top: 2rem;
 }
 
-.expectation-card {
-    text-align: center;
-    padding: 2rem 1.5rem;
-    background-color: var(--dark-static-black);
-    border: 3px solid var(--washed-out-grey);
-    border-radius: 0;
-    clip-path: polygon(0 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 5px 100%, 0 calc(100% - 5px));
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+.expectation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgba(26, 26, 26, 0.3);
+    border-left: 3px solid var(--flickering-cyan);
+    transition: all 0.2s ease;
 }
 
-.expectation-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 2px,
-            rgba(140, 140, 140, 0.05) 2px,
-            rgba(140, 140, 140, 0.05) 4px
-        );
-    z-index: 1;
+.expectation-item:hover {
+    background-color: rgba(26, 26, 26, 0.6);
+    border-left-color: var(--distorted-purple);
 }
 
-.expectation-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--flickering-cyan);
-    box-shadow: 0 8px 16px rgba(0, 255, 255, 0.3);
+.expectation-item .expectation-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    line-height: 1;
 }
 
-.expectation-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    position: relative;
-    z-index: 2;
+.expectation-text {
+    flex: 1;
 }
 
-.expectation-title {
-    font-size: 1.3rem;
-    margin-bottom: 1rem;
+.expectation-item .expectation-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
     color: var(--flickering-cyan);
     text-shadow: 1px 1px 0px var(--distorted-purple);
-    position: relative;
-    z-index: 2;
+    font-weight: bold;
 }
 
-.expectation-description {
+.expectation-item .expectation-description {
     color: var(--off-white-beige);
-    line-height: 1.6;
-    position: relative;
-    z-index: 2;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
 }
 
 /* Episodes Section */
@@ -3714,7 +3695,7 @@ a:hover {
         align-items: center;
     }
     
-    .expectations-grid {
+    .expectations-list {
         grid-template-columns: 1fr;
     }
     

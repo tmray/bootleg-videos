@@ -14,7 +14,7 @@ expectations:
   
   - icon: "💬"
     title: "Interactive Chat"
-    description: "Join the conversation! Ask questions, request songs, and chat with the band live."
+    description: "Join the conversation! Ask questions, talk music, and chat with the band live."
   
   - icon: "🎼"
     title: "Songwriting Sessions"
@@ -25,12 +25,12 @@ expectations:
     description: "Get an unfiltered look at our studio setup, gear, and band dynamics."
   
   - icon: "🎵"
-    title: "Music Requests"
-    description: "Request your favorite songs from our catalog during the live stream."
+    title: "Music Performances"
+    description: "We play songs from our catalog during the live stream."
   
-  - icon: "🎤"
-    title: "Q&A Sessions"
-    description: "Ask us about our music, gear, songwriting process, or anything else!"
+  # - icon: "🎤"
+  #   title: "Q&A Sessions"
+  #   description: "Ask us about our music, gear, songwriting process, or anything else!"
 
 # Latest Episodes (add your recent episodes here)
 episodes:

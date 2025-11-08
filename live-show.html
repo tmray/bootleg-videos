@@ -60,12 +60,14 @@ subtitle: Lorenzo's Music The Live & Unfiltered Show
     <!-- What to Expect Section -->
     <div class="expectations-section">
         <h2 class="section-title">What to Expect</h2>
-        <div class="expectations-grid">
+        <div class="expectations-list">
             {% for expectation in site.data.live_show.expectations %}
-            <div class="expectation-card">
-                <div class="expectation-icon">{{ expectation.icon }}</div>
-                <h3 class="expectation-title">{{ expectation.title }}</h3>
-                <p class="expectation-description">{{ expectation.description }}</p>
+            <div class="expectation-item">
+                <span class="expectation-icon">{{ expectation.icon }}</span>
+                <div class="expectation-text">
+                    <h4 class="expectation-title">{{ expectation.title }}</h4>
+                    <p class="expectation-description">{{ expectation.description }}</p>
+                </div>
             </div>
             {% endfor %}
         </div>
